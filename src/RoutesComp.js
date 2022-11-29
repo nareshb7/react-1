@@ -19,6 +19,9 @@ import Calculator from './components/calculator/Calculator';
 import Params from './components/NestedRouting/Params';
 import EmiCalculator from './components/emiCalculator/EmiCalculator';
 import SpeedCalculator from './components/speedCalc/SpeedCalculator';
+import Stopwatch from './components/stopwatch/Stopwatch';
+import RandomColor from './components/randomColor/RandomColor';
+import AgeCalculator from './components/ageCalculator/AgeCalculator';
 
 const RoutesComp = () => {
   return (
@@ -46,6 +49,9 @@ const RoutesComp = () => {
         <Route path="params/:obj" element={<Params />} />
         <Route path="emiCalculator" element={<EmiCalculator />} />
         <Route path="speedCalculator" element={<SpeedCalculator />} />
+        <Route path="stopwatch" element={<Stopwatch />} />
+        <Route path="randomcolor" element={<RandomColor />} />
+        <Route path="agecalculator" element={<AgeCalculator />} />
       </Routes>
     </div>
   );

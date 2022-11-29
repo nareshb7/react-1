@@ -49,6 +49,15 @@ const Nav = () => {
         <li>
           <NavLink to="speedCalculator">Speed Calculator</NavLink>
         </li>
+        <li>
+          <NavLink to="stopwatch">StopWatch</NavLink>
+        </li>
+        <li>
+          <NavLink to="randomColor">RandomColor Generator</NavLink>
+        </li>
+        <li>
+          <NavLink to="agecalculator">Age Calculator</NavLink>
+        </li>
       </ul>
     </nav>
   );

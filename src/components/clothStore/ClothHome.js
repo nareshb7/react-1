@@ -17,7 +17,7 @@ const ClothHome = () => {
       ? setSltData([])
       : setSltData(data[e.target.value]);
   };
-  const handleClick = () => {
+  const handleClick = (item) => {
     alert(`You just ordered ${item.title}`);
     setCartItems([...cartItems, item]);
   };

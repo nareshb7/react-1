@@ -8,7 +8,7 @@ const ItemCard = ({ item, handleClick }) => {
       </div>
       <h3>Title : {item.title}</h3>
       <h4>Price : {item.price}</h4>
-      <button onClick={handleClick}>Add to Cart</button>
+      <button onClick={() => handleClick(item)}>Add to Cart</button>
     </div>
   );
 };

@@ -47,10 +47,7 @@ a {
   text-align: center;
   border-radius: 10px;
 }
-/* .calcBtn input {
-  padding: 10px 20px;
-  border-radius: 10px;
-} */
+
 .calcBtn button {
   padding: 20px;
   margin: 6px;
@@ -66,7 +63,7 @@ a {
   text-align: center;
 }
 
-.outlet input,
+.outlet input[type='text'],
 .outlet button {
   padding: 10px 20px;
   border-radius: 8px;

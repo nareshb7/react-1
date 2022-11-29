@@ -74,3 +74,6 @@ a {
   background-color: #999;
   color: #fff;
 }
+table tr td {
+  border-block: 1px solid #888;
+}

@@ -39,7 +39,7 @@ const Cart = () => {
           </table>
         </div>
       ) : (
-        <h1>Cart Is Empty</h1>
+        <h1>Cart is Empty</h1>
       )}
     </div>
   );

@@ -21,6 +21,10 @@ export const Comp1 = () => {
         <Link to="comp2">Go to Comp 2</Link>{' '}
       </div>
       <div>
+        <Link to="/params/Naresh">Params - Naresh</Link>{' '}
+        <Link to="/params/Mayur">Params - Mayur</Link>{' '}
+      </div>
+      <div>
         <Outlet />
       </div>
     </UserContext.Provider>

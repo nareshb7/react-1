@@ -166,7 +166,7 @@ const Contact = () => {
             <select name="position" onChange={handleChange} defaultValue="FDE">
               <option value="FDE">FDE</option>
               <option value="SDE-1">SDE - 1</option>
-              <option value="SDE-2">SDE-2</option>
+              <option value="SDE-2">SDE - 2</option>
             </select>
           </div>
           <div>

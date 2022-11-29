@@ -43,6 +43,12 @@ const Nav = () => {
         <li>
           <NavLink to="calculator">Calculator</NavLink>
         </li>
+        <li>
+          <NavLink to="emiCalculator">Emi Calculator</NavLink>
+        </li>
+        <li>
+          <NavLink to="speedCalculator">Speed Calculator</NavLink>
+        </li>
       </ul>
     </nav>
   );

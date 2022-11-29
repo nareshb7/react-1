@@ -14,8 +14,11 @@ import Cart from './components/clothStore/Cart';
 import ReduxExample from './components/redux/ReduxExample';
 import Example from './components/example/Example';
 import Count from './components/reusableComp/Count';
-import LineBar from './components/progressBar/LineBar'
-import Calculator from './components/calculator/Calculator'
+import LineBar from './components/progressBar/LineBar';
+import Calculator from './components/calculator/Calculator';
+import Params from './components/NestedRouting/Params';
+import EmiCalculator from './components/emiCalculator/EmiCalculator';
+import SpeedCalculator from './components/speedCalc/SpeedCalculator';
 
 const RoutesComp = () => {
   return (
@@ -38,8 +41,11 @@ const RoutesComp = () => {
         <Route path="reduxexample" element={<ReduxExample />} />
         <Route path="example" element={<Example />} />
         <Route path="reusable" element={<Count />} />
-        <Route path='progressbar' element={ <LineBar />} />
-        <Route path='calculator' element={<Calculator /> } />
+        <Route path="progressbar" element={<LineBar />} />
+        <Route path="calculator" element={<Calculator />} />
+        <Route path="params/:obj" element={<Params />} />
+        <Route path="emiCalculator" element={<EmiCalculator />} />
+        <Route path="speedCalculator" element={<SpeedCalculator />} />
       </Routes>
     </div>
   );

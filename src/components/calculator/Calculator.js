@@ -29,7 +29,6 @@ const Calculator = () => {
       setVal2('');
       setResult('');
       setCalc(val);
-      console.log('sample');
     }
   };
   const handleResult = () => {

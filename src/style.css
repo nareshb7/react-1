@@ -47,10 +47,10 @@ a {
   text-align: center;
   border-radius: 10px;
 }
-.calcBtn input {
+/* .calcBtn input {
   padding: 10px 20px;
   border-radius: 10px;
-}
+} */
 .calcBtn button {
   padding: 20px;
   margin: 6px;
@@ -60,7 +60,20 @@ a {
   box-shadow: 1px 2px 4px;
   border: none;
 }
-.calcBtn button:hover {
-  background-color: #000;
+
+.outlet {
+  background-color: #aaa;
+  text-align: center;
+}
+
+.outlet input,
+.outlet button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+.outlet button:hover {
+  background-color: #999;
   color: #fff;
 }

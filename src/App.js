@@ -10,7 +10,9 @@ export default function App() {
   return (
     <div>
       <Nav />
-      <RoutesComp />
+      <div className="outlet">
+        <RoutesComp />
+      </div>
     </div>
   );
 }

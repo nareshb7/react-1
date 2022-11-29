@@ -21,7 +21,7 @@ const Stopwatch = () => {
     clearInterval(val);
   };
   const lapFunc = () => {
-    setLaps([...laps, count]);
+    setLaps([...laps, count + 10]);
   };
   const reset = () => {
     setLaps([]);

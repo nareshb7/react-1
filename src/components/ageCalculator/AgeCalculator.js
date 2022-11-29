@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const AgeCalculator = () => {
   const [dob, setDob] = useState('');
   const [result, setResult] = useState('');
+
   const handleFunc = () => {
     let d = new Date(dob).getTime();
     let today = new Date().getTime();
@@ -13,6 +14,7 @@ const AgeCalculator = () => {
     let days = Math.floor((tdays % 365) % 31);
     setResult(`${years} Years ${months} Months ${days} Days`);
   };
+
   return (
     <div>
       <div>

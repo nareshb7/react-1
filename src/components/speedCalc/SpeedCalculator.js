@@ -4,7 +4,7 @@ const SpeedCalculator = () => {
   const [kmph, setKMPH] = useState('');
   const [distance, setDistance] = useState('');
   const [time, setTime] = useState('');
-  const [output, setOutput] = useState(0);
+  const [output, setOutput] = useState('');
 
   const speedFunc = (e) => {
     e.preventDefault();

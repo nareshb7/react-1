@@ -18,6 +18,7 @@ const AgeCalculator = () => {
   return (
     <div>
       <div>
+        <span>Enter the Date :</span>
         <input
           type="date"
           value={dob}

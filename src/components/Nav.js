@@ -58,6 +58,9 @@ const Nav = () => {
         <li>
           <NavLink to="agecalculator">Age Calculator</NavLink>
         </li>
+        <li>
+          <NavLink to="simpleinterest">Interest Calculator</NavLink>
+        </li>
       </ul>
     </nav>
   );

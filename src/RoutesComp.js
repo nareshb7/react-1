@@ -22,6 +22,7 @@ import SpeedCalculator from './components/speedCalc/SpeedCalculator';
 import Stopwatch from './components/stopwatch/Stopwatch';
 import RandomColor from './components/randomColor/RandomColor';
 import AgeCalculator from './components/ageCalculator/AgeCalculator';
+import SimpleInterest from './components/interestCalculator/SimpleInterest'
 
 const RoutesComp = () => {
   return (
@@ -52,6 +53,7 @@ const RoutesComp = () => {
         <Route path="stopwatch" element={<Stopwatch />} />
         <Route path="randomcolor" element={<RandomColor />} />
         <Route path="agecalculator" element={<AgeCalculator />} />
+        <Route path='simpleInterest' element ={<SimpleInterest /> } />
       </Routes>
     </div>
   );

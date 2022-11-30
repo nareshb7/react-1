@@ -4,8 +4,8 @@ const Stopwatch = () => {
   let [count, setCount] = useState(0);
   const [toggle, setToggle] = useState(true);
   const [laps, setLaps] = useState([]);
-  //let d = new Date().getSeconds()
   let [val, setVal] = useState('');
+
   const startFunc = () => {
     if (toggle) {
       setToggle(false);
@@ -16,13 +16,16 @@ const Stopwatch = () => {
       );
     }
   };
+
   const stopFunc = () => {
     setToggle(true);
     clearInterval(val);
   };
+
   const lapFunc = () => {
     setLaps([...laps, count + 10]);
   };
+
   const reset = () => {
     setLaps([]);
     clearInterval(val);

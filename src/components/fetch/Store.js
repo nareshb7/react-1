@@ -11,9 +11,6 @@ const Store = () => {
   };
   fetchFun();
 
-  if (!fetchData.length) {
-    return <h1 style={{ textAlign: 'center' }}>Loading....</h1>;
-  }
   return (
     <div>
       {fetchData?.length ? (

@@ -55,7 +55,7 @@ const SimpleInterest = () => {
       <div>
         <h3>Interest Amount : Rs. {interest}/-</h3>
         <h3>Total Amount : Rs. {interest + parseInt(data.principal)}/-</h3>
-        <h5>{JSON.stringify(data)}</h5>
+        <h5>Data : {JSON.stringify(data)}</h5>
       </div>
     </div>
   );

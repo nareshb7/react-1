@@ -20,16 +20,18 @@ const Calculator = () => {
   };
   const handleFunc = (val) => {
     setValue(value.concat(val));
-    setIpt('');
     setCalc(val);
+
     setIsVal(false);
     if (calc) {
+      console.log('enter');
       let c = handleResult();
       setVal1(c);
       setVal2('');
       setResult('');
       setCalc(val);
     }
+    setIpt('');
   };
   const handleResult = () => {
     setIpt('');
@@ -62,6 +64,7 @@ const Calculator = () => {
     setVal2('');
     setResult('');
     setValue('');
+    setCalc('');
   };
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>

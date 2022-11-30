@@ -11,7 +11,8 @@ const SimpleInterest = () => {
   useEffect(() => {
     let years = (data.time / 12).toFixed(2);
     let amt = (data.principal * years * data.roi) / 100;
-    console.log(years, 'years');
+    // let val = (data.principal * (1 + years * data.roi)) / 10;
+    // console.log(val, 'val');
     setInterest(amt);
   }, [data]);
 
@@ -38,8 +39,7 @@ const SimpleInterest = () => {
             setData({ ...data, [e.target.name]: e.target.value })
           }
         />
-        <br />
-        5%{' '}
+        <br />{' '}
         <input
           type="range"
           name="roi"
@@ -50,8 +50,7 @@ const SimpleInterest = () => {
           min="5"
           max="15"
         />{' '}
-        15%
-        <div>value : {data.roi}%</div>
+        value : {data.roi}%<div></div>
       </div>
       <div>
         <h3>Interest Amount : Rs. {interest}/-</h3>

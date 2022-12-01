@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Calculator = () => {
   const [ipt, setIpt] = useState('');
@@ -8,10 +8,12 @@ const Calculator = () => {
   const [calc, setCalc] = useState('');
   const [value, setValue] = useState('');
   const [isValOne, setIsVal] = useState(true);
+  const [disable, setDisable] = useState(false);
 
   const handleClick = (val) => {
     setValue(value.concat(val));
     setIpt(ipt.concat(val));
+    setDisable(false);
     if (isValOne) {
       setVal1(ipt.concat(val));
     } else {
@@ -21,8 +23,8 @@ const Calculator = () => {
   const handleFunc = (val) => {
     setValue(value.concat(val));
     setCalc(val);
-
     setIsVal(false);
+    setDisable(true);
     if (calc) {
       console.log('enter');
       let c = handleResult();
@@ -66,6 +68,7 @@ const Calculator = () => {
     setValue('');
     setCalc('');
   };
+
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
       <div className="calcBtn">
@@ -90,13 +93,23 @@ const Calculator = () => {
           <button onClick={() => handleClick(9)}>9</button>
         </div>
         <div>
-          <button onClick={() => handleFunc('-')}>-</button>
-          <button onClick={() => handleFunc('+')}>+ </button>
+          <button onClick={() => handleFunc('-')} disabled={disable}>
+            -
+          </button>
+          <button onClick={() => handleFunc('+')} disabled={disable}>
+            +{' '}
+          </button>
           <button onClick={() => handleClick(0)}>0</button>
         </div>
         <div>
-          <button onClick={() => handleFunc('/')}> / </button>
-          <button onClick={() => handleFunc('*')}> x </button>
+          <button onClick={() => handleFunc('/')} disabled={disable}>
+            {' '}
+            /{' '}
+          </button>
+          <button onClick={() => handleFunc('*')} disabled={disable}>
+            {' '}
+            x{' '}
+          </button>
           <button onClick={handleResult} style={{ backgroundColor: '#0ff' }}>
             {' '}
             ={' '}

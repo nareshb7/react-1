@@ -61,6 +61,9 @@ const Nav = () => {
         <li>
           <NavLink to="simpleinterest">Interest Calculator</NavLink>
         </li>
+        <li>
+          <NavLink to="textfile">Text File</NavLink>
+        </li>
       </ul>
     </nav>
   );

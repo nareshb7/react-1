@@ -26,7 +26,6 @@ const Calculator = () => {
     setIsVal(false);
     setDisable(true);
     if (calc) {
-      console.log('enter');
       let c = handleResult();
       setVal1(c);
       setVal2('');
@@ -68,6 +67,10 @@ const Calculator = () => {
     setValue('');
     setCalc('');
   };
+  const backFunc = () => {
+    alert("Button Does n't working");
+    console.log(value, 'valueeee');
+  };
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -76,6 +79,9 @@ const Calculator = () => {
         <div>{value}.</div>
         <div>
           <input type="text" defaultValue={ipt} />
+          <button style={{ backgroundColor: '#099' }} onClick={backFunc}>
+            Back
+          </button>
         </div>
         <div>
           <button onClick={() => handleClick(1)}>1</button>

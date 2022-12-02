@@ -11,7 +11,7 @@ const TextFile = () => {
 
   const dummyFunc = () => {
     var row_width = 40;
-
+//ok we wil do 
     var content = '';
     content += 'Username' + new Array(row_width + 1).join(' ') + 'Password\n';
     content += '********' + new Array(row_width + 1).join(' ') + '********\n';

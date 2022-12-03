@@ -5,7 +5,7 @@ const Calculator = () => {
   const [val1, setVal1] = useState('');
   const [result, setResult] = useState('');
   const [val2, setVal2] = useState('');
-  const [calc, setCalc] = useState('');
+  const [operator, setOperator] = useState('');
   const [value, setValue] = useState('');
   const [isValOne, setIsVal] = useState(true);
   const [disable, setDisable] = useState(false);
@@ -22,22 +22,22 @@ const Calculator = () => {
   };
   const handleFunc = (val) => {
     setValue(value.concat(val));
-    setCalc(val);
+    setOperator(val);
     setIsVal(false);
     setDisable(true);
-    if (calc) {
+    if (operator) {
       let c = handleResult();
       setVal1(c);
       setVal2('');
       setResult('');
-      setCalc(val);
+      setOperator(val);
     }
     setIpt('');
   };
   const handleResult = () => {
     setIpt('');
     let result = 0;
-    switch (calc) {
+    switch (operator) {
       case '+':
         result = Number(val1) + Number(val2);
         setResult(result);
@@ -65,7 +65,7 @@ const Calculator = () => {
     setVal2('');
     setResult('');
     setValue('');
-    setCalc('');
+    setOperator('');
   };
   const backFunc = () => {
     alert("Button Does n't working");

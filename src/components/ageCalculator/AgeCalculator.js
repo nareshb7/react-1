@@ -5,6 +5,7 @@ const AgeCalculator = () => {
   const [result, setResult] = useState('');
 
   const handleFunc = () => {
+    //It checks with Ur DOB and Present Date and Calculates the Days...
     let d = new Date(dob).getTime();
     let today = new Date().getTime();
     let res = today - d;

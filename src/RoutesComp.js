@@ -22,8 +22,9 @@ import SpeedCalculator from './components/speedCalc/SpeedCalculator';
 import Stopwatch from './components/stopwatch/Stopwatch';
 import RandomColor from './components/randomColor/RandomColor';
 import AgeCalculator from './components/ageCalculator/AgeCalculator';
-import SimpleInterest from './components/interestCalculator/SimpleInterest'
-import TextFile from './components/textFile/Textfile'
+import SimpleInterest from './components/interestCalculator/SimpleInterest';
+import TextFile from './components/textFile/Textfile';
+import Index from './components/pagination/Index';
 
 const RoutesComp = () => {
   return (
@@ -54,8 +55,9 @@ const RoutesComp = () => {
         <Route path="stopwatch" element={<Stopwatch />} />
         <Route path="randomcolor" element={<RandomColor />} />
         <Route path="agecalculator" element={<AgeCalculator />} />
-        <Route path='simpleInterest' element ={<SimpleInterest /> } />
-        <Route path='textfile' element={<TextFile />} />
+        <Route path="simpleInterest" element={<SimpleInterest />} />
+        <Route path="textfile" element={<TextFile />} />
+        <Route path="pagination" element={<Index />} />
       </Routes>
     </div>
   );

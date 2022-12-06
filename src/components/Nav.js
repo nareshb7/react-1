@@ -64,6 +64,9 @@ const Nav = () => {
         <li>
           <NavLink to="textfile">Text File</NavLink>
         </li>
+        <li>
+          <NavLink to="pagination">Pagination Example</NavLink>
+        </li>
       </ul>
     </nav>
   );

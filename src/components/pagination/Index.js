@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import PaginationEx from './PaginationEx';
 import data from './mockdata.json';
 import './style.scss';
+import NewIndex from './newPagination/NewIndex';
 
 let PageSize = 10;
 
@@ -13,40 +14,47 @@ export default function Index() {
     const lastPageIndex = firstPageIndex + PageSize;
     return data.slice(firstPageIndex, lastPageIndex);
   }, [currentPage]);
+  const [sample, setSample] = useState(false);
 
   return (
-    <>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>FIRST NAME</th>
-            <th>LAST NAME</th>
-            <th>EMAIL</th>
-            <th>PHONE</th>
-          </tr>
-        </thead>
-        <tbody>
-          {currentTableData.map((item) => {
-            return (
+    <div>
+      {sample ? (
+        <>
+          <table>
+            <thead>
               <tr>
-                <td>{item.id}</td>
-                <td>{item.first_name}</td>
-                <td>{item.last_name}</td>
-                <td>{item.email}</td>
-                <td>{item.phone}</td>
+                <th>ID</th>
+                <th>FIRST NAME</th>
+                <th>LAST NAME</th>
+                <th>EMAIL</th>
+                <th>PHONE</th>
               </tr>
-            );
-          })}
-        </tbody>
-      </table>
-      <PaginationEx
-        className="pagination-bar"
-        currentPage={currentPage}
-        totalCount={data.length}
-        pageSize={PageSize}
-        onPageChange={(page) => setCurrentPage(page)}
-      />
-    </>
+            </thead>
+            <tbody>
+              {currentTableData.map((item) => {
+                return (
+                  <tr>
+                    <td>{item.id}</td>
+                    <td>{item.first_name}</td>
+                    <td>{item.last_name}</td>
+                    <td>{item.email}</td>
+                    <td>{item.phone}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          <PaginationEx
+            className="pagination-bar"
+            currentPage={currentPage}
+            totalCount={data.length}
+            pageSize={PageSize}
+            onPageChange={(page) => setCurrentPage(page)}
+          />
+        </>
+      ) : (
+        <NewIndex />
+      )}
+    </div>
   );
 }

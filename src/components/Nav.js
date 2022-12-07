@@ -23,7 +23,7 @@ const Nav = () => {
           <NavLink to="store"> Store </NavLink>
         </li>
         <li>
-          <NavLink to="comp1"> Nested Comp 1 </NavLink>
+          <NavLink to="comp1"> Nested Comp & Context </NavLink>
         </li>
         <li>
           <NavLink to="clothhome"> ClothHome </NavLink>

@@ -43,7 +43,8 @@ const Example2 = () => {
             <li key={idx}>
               <h3>
                 {' '}
-                {user} <button onClick={() => editFunc(idx)}> Edit </button>
+                {idx + 1} . {user}{' '}
+                <button onClick={() => editFunc(idx)}> Edit </button>
               </h3>{' '}
             </li>
           );

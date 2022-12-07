@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Example1 from './Example1';
 import Example2 from './Example2';
 import Ex3 from './Ex3';
-import Palindrome from './Palindrome'
+import Palindrome from './Palindrome';
 
 const Example = () => {
   const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'july'];
@@ -54,7 +54,7 @@ const Example = () => {
       </div>
 
       <div>
-        <h2>Example 2: </h2>
+        <h2>Example 2: (Add Update Delete) </h2>
         <Example2 />
       </div>
       <div>

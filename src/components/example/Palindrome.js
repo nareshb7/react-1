@@ -8,8 +8,7 @@ const Palindrome = () => {
     for (let x of ipt) {
       rev.unshift(x);
     }
-    let res =
-      ipt.toString() == rev.join('') ? 'is Palindrome' : 'is Not Palindrome';
+    let res = ipt == rev.join('') ? 'is Palindrome' : 'is Not Palindrome';
     setResult(res);
   };
   return (

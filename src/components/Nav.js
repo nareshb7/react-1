@@ -67,6 +67,9 @@ const Nav = () => {
         <li>
           <NavLink to="pagination">Pagination Example</NavLink>
         </li>
+        <li>
+          <NavLink to="weatherapp">Weather App </NavLink>
+        </li>
       </ul>
     </nav>
   );

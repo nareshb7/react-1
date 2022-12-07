@@ -25,6 +25,7 @@ import AgeCalculator from './components/ageCalculator/AgeCalculator';
 import SimpleInterest from './components/interestCalculator/SimpleInterest';
 import TextFile from './components/textFile/Textfile';
 import Index from './components/pagination/Index';
+import WeatherMain from './components/weatherApp/WeatherMain';
 
 const RoutesComp = () => {
   return (
@@ -58,6 +59,7 @@ const RoutesComp = () => {
         <Route path="simpleInterest" element={<SimpleInterest />} />
         <Route path="textfile" element={<TextFile />} />
         <Route path="pagination" element={<Index />} />
+        <Route path="weatherapp" element={<WeatherMain />} />
       </Routes>
     </div>
   );

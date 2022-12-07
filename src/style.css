@@ -65,6 +65,7 @@ a {
 }
 
 .outlet input[type='text'],
+input[type='password'],
 .outlet button {
   padding: 10px 20px;
   border-radius: 8px;

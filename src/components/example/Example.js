@@ -4,6 +4,7 @@ import Example1 from './Example1';
 import Example2 from './Example2';
 import Ex3 from './Ex3';
 import Palindrome from './Palindrome';
+import Ex4 from './Ex4';
 
 const Example = () => {
   const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'july'];
@@ -41,14 +42,14 @@ const Example = () => {
       {/* {filterData.map((val) => (
         <h1>{val}</h1>
       ))} */}
-      <h2>Example : </h2>
+      {/* <h2>Example : </h2>
       <input type="file" onChange={handleChange} />
-      <button onClick={downloadImage}>Click to Download Image</button>
+      <button onClick={downloadImage}>Click to Download Image</button> */}
       {/* <div style={{ width: '300px', height: '400px' }}>
         <img src={imgSrc} alt="image" width="100%" height="100%" />
       </div> */}
       {/* <Example1 /> */}
-      <div>
+      {/* <div>
         <h2>Example 1: </h2>
         <Example1 />
       </div>
@@ -62,7 +63,8 @@ const Example = () => {
       </div>
       <div>
         <Palindrome />
-      </div>
+      </div> */}
+      <Ex4 />
     </div>
   );
 };

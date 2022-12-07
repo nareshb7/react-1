@@ -1,0 +1,39 @@
+base
+: 
+"stations"
+clouds
+: 
+{all: 20}
+cod
+: 
+200
+coord
+: 
+{lon: 78.4744, lat: 17.3753}
+dt
+: 
+1670404792
+id
+: 
+1269843
+main
+: 
+{temp: 300.38, feels_like: 299.98, temp_min: 300.38, temp_max: 301.88, pressure: 1013, …}
+name
+: 
+"Hyderabad"
+sys
+: 
+{type: 1, id: 9214, country: 'IN', sunrise: 1670375020, sunset: 1670415088}
+timezone
+: 
+19800
+visibility
+: 
+5000
+weather
+: 
+[{…}]
+wind
+: 
+{speed: 4.12, deg: 50}

@@ -4,8 +4,7 @@ import SignUp from './SignUp';
 import { UserContext } from './WeatherMain';
 
 const Welcome = () => {
-  const userData = useContext(UserContext);
-  console.log(userData, 'userData');
+  const { userData } = useContext(UserContext);
   const [location, setLocation] = useState('');
   const [result, setResult] = useState({});
 
@@ -22,11 +21,12 @@ const Welcome = () => {
   return (
     <div>
       <h2>Weather app</h2>
+      <h3>Hii {userData.fName}</h3>
       <div>
         <input
           type="text"
           value={location}
-          onChange={() => setLocation(e.target.value)}
+          onChange={(e) => setLocation(e.target.value)}
         />
         <button onClick={() => fetchFunc(location)}>Check</button>
       </div>

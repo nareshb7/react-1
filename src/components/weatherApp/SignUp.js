@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { UserContext } from './WeatherMain';
 
 const SignUp = () => {
+  const navigate = useNavigate();
+  const { users, setUsers } = useContext(UserContext);
   const [data, setData] = useState({
     fName: '',
     lName: '',
     mobile: '',
     password: '',
   });
-  const [loggedIn, isLoggedIn] = useState(false);
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
   const signUpFunc = () => {
-    alert('clicked');
-    console.log(data, 'iptData');
+    setUsers([...users, data]);
+    navigate('/weatherapp/login');
   };
   return (
     <div>

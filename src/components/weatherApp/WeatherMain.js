@@ -1,39 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, createContext } from 'react';
 import Login from './Login';
 import SignUp from './SignUp';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 
+export const UserContext = createContext();
 const WeatherMain = () => {
-  const [location, setLocation] = useState('');
-  const [result, setResult] = useState({});
-
-  const fetchFunc = async (city) => {
-    fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c30b4142205bfbfd27a2fcc400ba3a01`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setResult(data);
-      });
-  };
-
-  const handleChange = (e) => {
-    fetchFunc(e.target.value);
-    setLocation(e.target.value);
-  };
-  console.log(result, 'result');
+  const [newUser, setIsNewUser] = useState(true);
+  const [userData, setUserData] = useState({
+    fName: '',
+    lName: '',
+    mobile: '',
+    password: '',
+  });
+  const navigate = useNavigate();
+  useEffect(() => {
+    newUser ? navigate('signup') : navigate('login');
+  }, []);
   return (
-    <div>
-      <h2>Weather app</h2>
+    <UserContext.Provider value={userData}>
       <div>
-        <input type="text" value={location} onChange={handleChange} />
+        <Outlet />
       </div>
-      <div>
-        <h3>City Name : {result?.name}</h3>
-        <h3>Temparature : {result.main?.temp} </h3>
-        <h3>Max : {result.main?.temp_max}</h3>
-        <h3>Min : {result.main?.temp_min}</h3>
-      </div>
-    </div>
+    </UserContext.Provider>
   );
 };
 export default WeatherMain;

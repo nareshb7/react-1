@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 
 const SignUp = () => {
   const [data, setData] = useState({
@@ -7,6 +8,7 @@ const SignUp = () => {
     mobile: '',
     password: '',
   });
+  const [loggedIn, isLoggedIn] = useState(false);
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
@@ -54,6 +56,9 @@ const SignUp = () => {
       </div>
       <div>
         <button onClick={signUpFunc}>SignUp</button>
+      </div>
+      <div>
+        If u do have an account? <Link to="/weatherapp/login"> Click Here</Link>{' '}
       </div>
     </div>
   );

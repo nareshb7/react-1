@@ -70,6 +70,9 @@ const Nav = () => {
         <li>
           <NavLink to="weatherapp">Weather App </NavLink>
         </li>
+        <li>
+          <NavLink to='formik' >Formik</NavLink>
+        </li>
       </ul>
     </nav>
   );

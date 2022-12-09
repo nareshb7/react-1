@@ -12,7 +12,7 @@ const FormikEx = () => {
   };
   const validateFunc = ({ name, mobile, password }) => {
     let obj = { name: '', mobile: '', password: '' };
-    if (mobile.length < 10) {
+    if (!mobile.match(/^[\d]{10}$/)) {
       obj.mobile = '10 digits';
     }
     if (name.length < 3) {

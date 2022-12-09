@@ -1,64 +1,20 @@
-import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import {Link, Outlet} from 'react-router-dom'
 
-const FormikEx = () => {
-  const handleSubmit = (value) => {
-    console.log(value, 'value');
-    alert('Submitted, Check Console');
-  };
-  const validateFunc = ({ name, mobile, password }) => {
-    let obj = { name: '', mobile: '', password: '' };
-    if (!mobile.match(/^[\d]{10}$/)) {
-      obj.mobile = '10 digits';
-    }
-    if (name.length < 3) {
-      obj.name = 'Min. 3 Characters';
-    }
-    const psdPattern = /^[\d]{8,}$/;
-    if (!password.match(psdPattern)) {
-      obj.password = 'Min 8 digits required';
-    }
-    return obj;
-  };
+const FormikEx =()=> {
   return (
     <div>
-      Formik
+      Manual
       <div>
         <Link to="dynamicform">Go to Dynamic Form </Link>
       </div>
-      <Formik
-        initialValues={{ name: '', mobile: '', password: '' }}
-        onSubmit={handleSubmit}
-        validate={validateFunc}
-      >
-        {({ errors, touched }) => (
-          <Form>
-            <div>
-              <Field type="text" name="name" placeholder="Name" />
-              <div style={{ height: '25px' }}>
-                {touched.name && errors.name}
-              </div>
-            </div>
-            <div>
-              <Field type="text" name="mobile" placeholder="Mobile Number" />
-              <ErrorMessage name="mobile" component="div" />
-              <div style={{ height: '25px' }}>
-                {' '}
-                {touched.mobile && errors.mobile}
-              </div>
-            </div>
-            <div>
-              <Field type="text" name="password" placeholder="Password" />
-              <div style={{ height: '25px' }}>
-                {touched.password && errors.password}
-              </div>
-            </div>
-            <button type="submit">Submit</button>
-          </Form>
-        )}
-      </Formik>
+      <div>
+        <Link to="manualform">Go to Manual Form </Link>
+      </div>
+      <div>
+        <Outlet />
+      </div>
     </div>
-  );
-};
-export default FormikEx;
+  )
+}
+export default FormikEx

@@ -31,6 +31,7 @@ import WeatherMain from './components/weatherApp/WeatherMain';
 import Welcome from './components/weatherApp/Welcome';
 import FormikEx from './components/formik/FormikEx'
 import DynamicForm from './components/formik/dynamicForm/DynamicForm'
+import ManualForm from './components/formik/ManualForm'
 
 const RoutesComp = () => {
   return (
@@ -71,6 +72,7 @@ const RoutesComp = () => {
         </Route>
         <Route path='formik' element={<FormikEx />} >
           <Route path='dynamicform' element={<DynamicForm />} />
+          <Route path='manualform' element ={<ManualForm />} />
         </Route>
       </Routes>
     </div>

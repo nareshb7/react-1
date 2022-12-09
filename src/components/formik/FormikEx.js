@@ -1,9 +1,6 @@
 import React from 'react';
-import { Formik, Form, Field } from 'formik';
-
-String.prototype.ifNot = function (condition) {
-  return condition ? '' : this;
-};
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Link } from 'react-router-dom';
 
 const FormikEx = () => {
   const handleSubmit = (value) => {
@@ -27,6 +24,9 @@ const FormikEx = () => {
   return (
     <div>
       Formik
+      <div>
+        <Link to="dynamicform">Go to Dynamic Form </Link>
+      </div>
       <Formik
         initialValues={{ name: '', mobile: '', password: '' }}
         onSubmit={handleSubmit}
@@ -42,6 +42,7 @@ const FormikEx = () => {
             </div>
             <div>
               <Field type="text" name="mobile" placeholder="Mobile Number" />
+              <ErrorMessage name="mobile" component="div" />
               <div style={{ height: '25px' }}>
                 {' '}
                 {touched.mobile && errors.mobile}

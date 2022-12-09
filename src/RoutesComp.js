@@ -30,6 +30,7 @@ import Login from './components/weatherApp/Login';
 import WeatherMain from './components/weatherApp/WeatherMain';
 import Welcome from './components/weatherApp/Welcome';
 import FormikEx from './components/formik/FormikEx'
+import DynamicForm from './components/formik/dynamicForm/DynamicForm'
 
 const RoutesComp = () => {
   return (
@@ -68,7 +69,9 @@ const RoutesComp = () => {
           <Route path="signup" element={<SignUp />} />
           <Route path="welcomepage" element={<Welcome />} />
         </Route>
-        <Route path='formik' element={<FormikEx />} />
+        <Route path='formik' element={<FormikEx />} >
+          <Route path='dynamicform' element={<DynamicForm />} />
+        </Route>
       </Routes>
     </div>
   );

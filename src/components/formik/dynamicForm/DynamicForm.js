@@ -9,7 +9,6 @@ const DynamicForm = () => {
   const handleChange = (e, values, setValues, field) => {
     const persons = [...values.persons];
     const numberOfPersons = e.target.value || 0;
-    console.log(numberOfPersons, 'nop');
     const previousNumber = parseInt(field.value || '0');
     if (previousNumber < numberOfPersons) {
       for (let i = previousNumber; i < numberOfPersons; i++) {
@@ -20,9 +19,18 @@ const DynamicForm = () => {
         persons.splice(i, 1);
       }
     }
-    console.log(persons, 'persons');
     setValues({ ...values, persons });
     field.onChange(e);
+  };
+  const validateFunc = ({ numberOfPersons, persons }) => {
+    console.log(numberOfPersons, persons, 'validate');
+    let obj = { name: '', location: '' };
+    persons.map((person) => {
+      if (person.name.length < 3) {
+        obj.name = 'Min 3 Chars required';
+      }
+    });
+    return obj;
   };
   return (
     <div>
@@ -30,8 +38,9 @@ const DynamicForm = () => {
       <Formik
         initialValues={{ numberOfPersons: '', persons: [] }}
         onSubmit={submitFunc}
+        validate={validateFunc}
       >
-        {({ errors, values, setValues, touched }) => (
+        {({ errors, values, setValues }) => (
           <Form>
             <h3>Select No. of Persons :</h3>
             <Field name="numberOfPersons">

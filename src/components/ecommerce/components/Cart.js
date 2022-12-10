@@ -19,7 +19,7 @@ const Cart = () => {
     
     const checkOut=()=> {
         if (cartProducts.length){
-            navigate('/page2')
+            navigate('/ecom/page2')
         } else {
            setError('Your Cart is Empty')
         }

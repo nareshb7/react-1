@@ -10,7 +10,7 @@ const MyAccount = () => {
   const navigate = useNavigate()
   useEffect(() => {
     if (!currentUser.hasOwnProperty('username')) {
-      navigate('/login')
+      navigate('/ecom/login')
       return
     }
   }, [])
@@ -20,11 +20,11 @@ const MyAccount = () => {
   const logOutFunc = () => {
     dispatch(EmptyCart())
     dispatch(LogOut())
-    navigate('/login')
+    navigate('/ecom/login')
   }
   const editFunc=(obj)=> {
     console.log('clicked', obj);
-    navigate(`/edit/${JSON.stringify(obj)}`)
+    navigate(`/ecom/edit/${JSON.stringify(obj)}`)
   }
   return (
     <div>

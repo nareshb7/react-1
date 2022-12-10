@@ -25,7 +25,7 @@ const EditCurrentUser = (props) => {
         data.email = user.email
         dispatch(CurrentUser(data))
         dispatch(Update(data))
-        navigate('/myaccount')
+        navigate('/ecom/myaccount')
     }
   return (
     <div>

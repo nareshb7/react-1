@@ -33,9 +33,6 @@ import FormikEx from './components/formik/FormikEx';
 import DynamicForm from './components/formik/dynamicForm/DynamicForm';
 import ManualForm from './components/formik/ManualForm';
 import EcommerceMain from './components/ecommerce/Index';
-import EcomLogin from './components/ecommerce/EcomLogIn';
-import EcomSignUp from './components/ecommerce/EcomSignUp';
-import EcomHome from './components/ecommerce/EcomHome';
 
 const RoutesComp = () => {
   return (
@@ -78,11 +75,7 @@ const RoutesComp = () => {
           <Route path="dynamicform" element={<DynamicForm />} />
           <Route path="manualform" element={<ManualForm />} />
         </Route>
-        <Route path="ecom" element={<EcommerceMain />}>
-          <Route path="ecomlogin" element={<EcomLogin />} />
-          <Route path="ecomsignup" element={<EcomSignUp />} />
-          <Route path="ecomhome/*" element={<EcomHome />} />
-        </Route>
+        <Route path="ecom/*" element={<EcommerceMain />}></Route>
       </Routes>
     </div>
   );

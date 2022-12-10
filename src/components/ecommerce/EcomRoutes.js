@@ -1,8 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { useLocation, Location } from 'react-router-dom';
 
-import Header from './components/Header';
 import Navbar from './components/Navbar';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
@@ -19,11 +17,9 @@ import EditCurrentUser from './components/EditCurrentUser';
 import Bill from './components/Bill';
 
 const EcomRoutes = () => {
-  const location = useLocation()
   return (
     <div className="outlet">
-      <Routes Location>
-        <Route path="header" element={<Header />} />
+      <Routes >
         <Route path="nav-bar" element={<Navbar />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />

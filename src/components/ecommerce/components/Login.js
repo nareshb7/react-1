@@ -16,7 +16,7 @@ const Login = () => {
     const currentUser= useSelector(state=> state.data.currentUser)
     useEffect(()=> {
         if (currentUser.hasOwnProperty('username')){
-            navigate('/myaccount')
+            navigate('/ecom/myaccount')
         }
     }, [])
     const handleChange =(e)=> {
@@ -36,7 +36,7 @@ const Login = () => {
             if (data.password=== sysData.password) {
                 dispatch(CurrentUser(sysData))
                 alert('LogIn Sucessfully')
-                navigate('/page1')
+                navigate('/ecom/page1')
             } else {
                 errors.password= 'Password Not Matching'
             }  

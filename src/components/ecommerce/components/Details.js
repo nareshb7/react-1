@@ -16,7 +16,7 @@ const Details = () => {
     const handleSubmit = (e) => {
         document.getElementById('form1').reset()
         e.preventDefault()
-        navigate(`/bill/${JSON.stringify(userdata)}`)
+        navigate(`/ecom/bill/${JSON.stringify(userdata)}`)
        //navigate(`/${JSON.stringify(userdata)}`)
     }
     return (
@@ -75,7 +75,7 @@ const Details = () => {
                     <button type='submit'>Place order</button>
                 </div>
                 <div>
-                    <button onClick={() => navigate('/page1')}>Continue Shopping</button>
+                    <button onClick={() => navigate('/ecom/page1')}>Continue Shopping</button>
                 </div>
             </form>
         </div>

@@ -15,7 +15,7 @@ const Bill = (props) => {
         document.getElementById('page').style.visibility='visible'
         window.print()
         dispatch(EmptyCart())
-        navigate('/page1')
+        navigate('/ecom/page1')
         document.body.style.visibility= 'visible'
     }
     let total = 0

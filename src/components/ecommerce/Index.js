@@ -1,24 +1,16 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './Redux/Store';
+import Navbar from './components/Navbar';
+import EcomRoutes from './EcomRoutes'
+import './EcomStyles.css'
 
 const EcommerceMain = () => {
   return (
-    <div>
-      <ul className="navPage" style={{ margin: '5px' }}>
-        <li>
-          <Link to="/ecom/ecomlogin">LogIn </Link>
-        </li>
-        <li>
-          <Link to="/ecom/ecomsignup">Sign Up</Link>
-        </li>
-        <li>
-          <Link to="/ecom/ecomhome">Home Page</Link>
-        </li>
-      </ul>
-      <div>
-        <Outlet />
-      </div>
-    </div>
+    <Provider store={store}>
+      <Navbar />
+      <EcomRoutes />
+    </Provider>
   );
 };
 export default EcommerceMain;

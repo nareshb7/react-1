@@ -10,7 +10,7 @@ const Page2 = () => {
   const navigate  = useNavigate()
   useEffect( ()=> {
     if (!cartProducts.length){
-      navigate('/page1')
+      navigate('/ecom/page1')
       return
     }
   }, [cartProducts])

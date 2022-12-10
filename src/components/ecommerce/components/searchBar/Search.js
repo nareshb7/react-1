@@ -43,10 +43,7 @@ const Search = ({items}) => {
     //         if (a['iName'] > b['iName']) {return -1}
     //         return 0
     // }
-       
-        
-    
-  
+ 
   return (
     <div style={{display: 'flex', justifyContent: 'center', marginBlock: '10px', background: '#888'}}>
         <div style={{width: '50%'}}>

@@ -8,13 +8,25 @@ const NewIndex = () => {
   useEffect(() => {
     setCurrentData(data.slice(0, 10));
   }, []);
+  useEffect(() => {}, [currentPage]);
   const firstPage = 1;
-  const lastPage = 4;
+  const lastPage = 3;
 
-  const showDataFunc = (page) => {
-    page >= lastPage ? (page = 0) : (page = page);
-    setCurrentPage(page);
-    setCurrentData(data.slice(currentPage * 10, currentPage * 10 + 10));
+  const showDataFunc = (page, prop) => {
+    switch (prop) {
+      case '-':
+        page > lastPage ? (page = 0) : (page = page);
+        setCurrentPage(page - 1);
+        setCurrentData(data.slice(page * 10, page * 10 + 10));
+        break;
+      case '+':
+        page > lastPage ? (page = 0) : (page = page);
+        setCurrentPage(page + 1);
+        setCurrentData(data.slice(page * 10, page * 10 + 10));
+        break;
+      default:
+        return;
+    }
   };
   return (
     <div>
@@ -38,8 +50,8 @@ const NewIndex = () => {
           })}
         </tbody>
       </table>
-      {/* <button onClick={() => showDataFunc(currentPage - 1)}>Back </button> */}
-      <button onClick={() => showDataFunc(currentPage + 1)}>Next </button>
+      <button onClick={() => showDataFunc(currentPage, '-')}>Back </button>
+      <button onClick={() => showDataFunc(currentPage, '+')}>Next </button>
     </div>
   );
 };

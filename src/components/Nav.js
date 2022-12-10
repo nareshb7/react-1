@@ -73,6 +73,9 @@ const Nav = () => {
         <li>
           <NavLink to='formik' >Formik</NavLink>
         </li>
+        <li>
+          <NavLink to='ecom' >E commerce</NavLink >
+        </li>
       </ul>
     </nav>
   );

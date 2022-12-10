@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Nav from './components/Nav';
 import RoutesComp from './RoutesComp';
 
+
 export default function App() {
   return (
     <div>

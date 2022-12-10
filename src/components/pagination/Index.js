@@ -8,7 +8,6 @@ let PageSize = 10;
 
 export default function Index() {
   const [currentPage, setCurrentPage] = useState(1);
-
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
@@ -31,9 +30,9 @@ export default function Index() {
               </tr>
             </thead>
             <tbody>
-              {currentTableData.map((item) => {
+              {currentTableData.map((item, idx) => {
                 return (
-                  <tr>
+                  <tr key={idx}>
                     <td>{item.id}</td>
                     <td>{item.first_name}</td>
                     <td>{item.last_name}</td>

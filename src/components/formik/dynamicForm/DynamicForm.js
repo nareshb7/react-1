@@ -34,7 +34,7 @@ const DynamicForm = () => {
   };
   return (
     <div>
-      Dynamic Form
+      <h2>Dynamic Form</h2>
       <Formik
         initialValues={{ numberOfPersons: '', persons: [] }}
         onSubmit={submitFunc}
@@ -42,7 +42,7 @@ const DynamicForm = () => {
       >
         {({ errors, values, setValues }) => (
           <Form>
-            <h3>Select No. of Persons :</h3>
+            <h4>Select No. of Persons :</h4>
             <Field name="numberOfPersons">
               {({ field }) => (
                 <select

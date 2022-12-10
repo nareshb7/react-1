@@ -13,7 +13,7 @@ const Page1 = () => {
     const [sData, setData]= useState()
     useEffect( ()=> {
       if (!currentUser.hasOwnProperty('username')){
-        navigate('/login')
+        navigate('login')
         return
       }
     }, [currentUser])

@@ -81,7 +81,7 @@ const RoutesComp = () => {
         <Route path="ecom" element={<EcommerceMain />}>
           <Route path="ecomlogin" element={<EcomLogin />} />
           <Route path="ecomsignup" element={<EcomSignUp />} />
-          <Route path="ecomhome" element={<EcomHome />} />
+          <Route path="ecomhome/*" element={<EcomHome />} />
         </Route>
       </Routes>
     </div>

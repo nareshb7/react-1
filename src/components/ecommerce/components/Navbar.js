@@ -7,11 +7,11 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav>
+      <nav className='navPage'>
         <ul>
           <li><img src='#' alt='' /></li>
           <li><h2>Trend</h2>  </li>
-          <li><NavLink to='/page1'> Products</NavLink> </li>
+          <li><NavLink to='page1'> Products</NavLink> </li>
           <li><NavLink to='page2'> CheckOut </NavLink> </li>
           <li><NavLink to='signup'>SignUp</NavLink> </li>
           <li><NavLink to='login'>Log In</NavLink> </li>
@@ -19,6 +19,9 @@ const Navbar = () => {
           <li> {currentUser['username']}</li>
         </ul>
       </nav>
+      <div>
+        <Outlet />
+      </div>
       
     </div>
   )

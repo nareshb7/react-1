@@ -1,9 +1,12 @@
 import React from 'react'
+import Naresh from './assets/Naresh.jpeg'
 
 const EcomHome =()=> {
-  
+
   return (
-    <div></div>
+    <div>
+      <img src={Naresh} />
+    </div>
   )
 }
 export default EcomHome

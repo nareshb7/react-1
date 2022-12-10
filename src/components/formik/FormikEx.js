@@ -1,10 +1,9 @@
-import React from 'react'
-import {Link, Outlet} from 'react-router-dom'
+import React from 'react';
+import { Link, Outlet } from 'react-router-dom';
 
-const FormikEx =()=> {
+const FormikEx = () => {
   return (
     <div>
-      Manual
       <div>
         <Link to="dynamicform">Go to Dynamic Form </Link>
       </div>
@@ -15,6 +14,6 @@ const FormikEx =()=> {
         <Outlet />
       </div>
     </div>
-  )
-}
-export default FormikEx
+  );
+};
+export default FormikEx;

@@ -2,7 +2,6 @@ import React from 'react';
 import { Formik, Form, Field, FieldArray } from 'formik';
 
 const DynamicForm = () => {
-
   const submitFunc = (fields) => {
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(fields, null, 4));
   };
@@ -40,7 +39,7 @@ const DynamicForm = () => {
                 <select
                   {...field}
                   onChange={(e) => handleChange(e, values, setValues, field)}
-                  style={{padding:'10px'}}
+                  style={{ padding: '10px' }}
                 >
                   <option> ' '</option>
                   {[1, 2, 3, 4, 5].map((i, idx) => (
@@ -57,11 +56,11 @@ const DynamicForm = () => {
                   return (
                     <div key={idx} style={{ margin: '10px' }}>
                       <Field
-                        name={`tickets.${idx}.name`}
+                        name={`persons.${idx}.name`}
                         placeholder="Enter Name"
                       />
                       <Field
-                        name={`tickets.${idx}.location`}
+                        name={`persons.${idx}.location`}
                         placeholder="Enter Location"
                       />
                     </div>
@@ -69,7 +68,7 @@ const DynamicForm = () => {
                 })
               }
             </FieldArray>
-            <button type='submit'>Submit </button>
+            <button type="submit">Submit </button>
           </Form>
         )}
       </Formik>

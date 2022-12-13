@@ -5,11 +5,12 @@ import SignUp from './SignUp';
 import { UserContext } from './WeatherMain';
 
 const Welcome = () => {
+  const navigate = useNavigate();
   const { userData, setUserData } = useContext(UserContext);
   const [location, setLocation] = useState('');
   const [result, setResult] = useState({});
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+
   useEffect(() => {
     userData.hasOwnProperty('fName') ? '' : navigate('/weatherapp/login');
   }, [userData]);

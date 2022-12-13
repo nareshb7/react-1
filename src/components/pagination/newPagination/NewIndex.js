@@ -1,30 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import data from './newData.json';
+import data from '../mockdata.json';
 
 const NewIndex = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
   const [currentData, setCurrentData] = useState([]);
+  const lastPage = data.length / 10 - 1;
 
   useEffect(() => {
-    setCurrentData(data.slice(0, 10));
-  }, []);
-  const lastPage = (data.length/10) -1;
+    setCurrentData(data.slice(currentPage * 10, currentPage * 10 + 10));
+  }, [currentPage]);
 
   const showDataFunc = (page, prop) => {
-    page > lastPage ? (page = 0) : (page = page);
     switch (prop) {
       case '-':
-        setCurrentPage(page - 1);
-        setCurrentData(data.slice(page * 10, page * 10 + 10));
+        page <= 0 ? setCurrentPage(0) : setCurrentPage(page - 1);
         break;
       case '+':
-        setCurrentPage(page + 1);
-        setCurrentData(data.slice(page * 10, page * 10 + 10));
+        page >= lastPage ? setCurrentPage(lastPage) : setCurrentPage(page + 1);
         break;
       default:
         return;
     }
   };
+
   return (
     <div>
       <table>
@@ -48,6 +46,8 @@ const NewIndex = () => {
         </tbody>
       </table>
       <button onClick={() => showDataFunc(currentPage, '-')}>Back </button>
+      <span>{currentPage +1} </span>
+      <span> of Page : {lastPage + 1}</span>
       <button onClick={() => showDataFunc(currentPage, '+')}>Next </button>
     </div>
   );

@@ -7,14 +7,13 @@ export const UserContext = createContext();
 const WeatherMain = () => {
   const navigate = useNavigate();
   let previousData = JSON.parse(localStorage.getItem('WeatherUsers'));
-  const [newUser, setIsNewUser] = useState(true);
   const [userData, setUserData] = useState(previousData?.userData || {});
   const [users, setUsers] = useState(previousData?.users || []);
   let val = { userData, setUserData, users, setUsers };
 
   useEffect(() => {
     val = previousData;
-    newUser ? navigate('signup') : navigate('login');
+    userData.hasOwnProperty('fName') ? navigate('welcomepage') : navigate('login');
   }, []);
   useEffect(() => {
     localStorage.setItem('WeatherUsers', JSON.stringify(val));

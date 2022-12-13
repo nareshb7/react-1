@@ -4,7 +4,7 @@ import data from '../mockdata.json';
 const NewIndex = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [currentData, setCurrentData] = useState([]);
-  const lastPage = data.length / 10 - 1;
+  const lastPage = parseInt(data.length / 10) - 1;
 
   useEffect(() => {
     setCurrentData(data.slice(currentPage * 10, currentPage * 10 + 10));

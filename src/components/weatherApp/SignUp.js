@@ -11,12 +11,18 @@ const SignUp = () => {
     mobile: '',
     password: '',
   });
+  const [error, setError] = useState('')
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
   const signUpFunc = () => {
-    setUsers([...users, data]);
-    navigate('/weatherapp/login');
+    let isNew = users.find((user) => user.mobile == data.mobile);
+    if (!isNew && data.mobile) {
+      setUsers([...users, data]);
+      navigate('/weatherapp/login');
+    } else {
+      setError('Mobile Number is Already Registred!.')
+    }
   };
   return (
     <div>
@@ -56,6 +62,7 @@ const SignUp = () => {
           placeholder="Password"
         />
       </div>
+      <div>{error}</div>
       <div>
         <button onClick={signUpFunc}>SignUp</button>
       </div>

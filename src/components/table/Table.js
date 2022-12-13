@@ -36,17 +36,6 @@ const Table = () => {
   const toggleFunc = () => {
     setToggle(!toggle);
   };
-  // const sortFunc = (val) => {
-  //   let sampleData = JSON.parse(JSON.stringify(tableData));
-  //   console.log(sampleData, 'before');
-  //   sampleData.sort((a, b) => {
-  //     if (a[val] > b[val]) return 1;
-  //     if (a[val] < b[val]) return -1;
-  //     return 0;
-  //   });
-  //   console.log(sampleData, 'after');
-  //   setTableData(sampleData);
-  // };
   const reverseFunc = () => {
     let sampleData = JSON.parse(JSON.stringify(tableData));
     sampleData.reverse();

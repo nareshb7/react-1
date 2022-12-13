@@ -8,19 +8,16 @@ const NewIndex = () => {
   useEffect(() => {
     setCurrentData(data.slice(0, 10));
   }, []);
-  useEffect(() => {}, [currentPage]);
-  const firstPage = 1;
-  const lastPage = 3;
+  const lastPage = (data.length/10) -1;
 
   const showDataFunc = (page, prop) => {
+    page > lastPage ? (page = 0) : (page = page);
     switch (prop) {
       case '-':
-        page > lastPage ? (page = 0) : (page = page);
         setCurrentPage(page - 1);
         setCurrentData(data.slice(page * 10, page * 10 + 10));
         break;
       case '+':
-        page > lastPage ? (page = 0) : (page = page);
         setCurrentPage(page + 1);
         setCurrentData(data.slice(page * 10, page * 10 + 10));
         break;

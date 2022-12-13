@@ -19,10 +19,6 @@ const Navbar = () => {
           <li> {currentUser['username']}</li>
         </ul>
       </nav>
-      <div>
-        <Outlet />
-      </div>
-      
     </div>
   )
 }

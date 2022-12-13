@@ -8,27 +8,28 @@ nav ul li {
 nav h2 {
   margin: 5px;
 }
-.ipStyle label , .ipStyle input , .ipStyle button {
+.ipStyle label,
+.ipStyle input,
+.ipStyle button {
   margin: 5px;
   padding: 10px;
 }
-.userDetails label, .userDetails input , .userDetails select, .userDetails button  {
+.userDetails label,
+.userDetails input,
+.userDetails select,
+.userDetails button {
   width: 80%;
- padding: 10px 20px ;
- margin: 10px;
+  padding: 10px 20px;
+  margin: 10px;
 }
-.userDetails> div {
+.userDetails > div {
   width: 50%;
   display: inline-block;
-}
-.active {
-  color: #ccc
 }
 .button {
   padding: 10px 20px;
   margin: 10px;
   border-radius: 7px;
- 
 }
 .button:hover {
   cursor: pointer;
@@ -38,7 +39,8 @@ nav h2 {
 .danger {
   color: #f00;
 }
-.billTable th, .billTable td{
+.billTable th,
+.billTable td {
   border-block: 1px dashed #000;
   padding: 5px;
 }

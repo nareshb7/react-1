@@ -20,7 +20,7 @@ const Details = () => {
        //navigate(`/${JSON.stringify(userdata)}`)
     }
     return (
-        <div style={{ width: '75%' }}>
+        <div style={{ width: '65%' }}>
             <form className='userDetails' onSubmit={handleSubmit} id='form1'>
                 <div>
                     <div><label>First Name : </label></div>

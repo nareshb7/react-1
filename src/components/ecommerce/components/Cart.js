@@ -28,7 +28,7 @@ const Cart = () => {
         dispatch(EmptyCart())
     }
   return (
-    <div style={{width: '26%', display: 'inline-block', textAlign: 'center', border: '1px solid #bbb'}}>
+    <div style={{width: '35%', display: 'inline-block', textAlign: 'center', border: '1px solid #bbb'}}>
         <div>
             <span> Cart Items </span>
             <span><button className='button' onClick={()=> emptyCart() }> Empty Cart </button> </span>

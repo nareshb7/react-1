@@ -18,7 +18,7 @@ import Bill from './components/Bill';
 
 const EcomRoutes = () => {
   return (
-    <div className="outlet">
+    <div className="outlet" style={{bacvground:'#fff'}}>
       <Routes >
         <Route path="nav-bar" element={<Navbar />} />
         <Route path="signup" element={<SignUp />} />

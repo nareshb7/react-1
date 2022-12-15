@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Contact = () => {
-  const previousData = JSON.parse(localStorage.getItem('Contact')) || [];
+  const previousData = JSON.parse(localStorage.getItem('Contact-ListData')) || [];
   const [localData, setLocalData] = useState(previousData);
   const [valid, setValid] = useState(false);
   const [data, setData] = useState({
@@ -94,7 +94,7 @@ const Contact = () => {
       setError({ ...error, email: 'Email Id is Already Exist' });
     }
   };
-  localStorage.setItem('Contact', JSON.stringify(localData));
+  localStorage.setItem('Contact-ListData', JSON.stringify(localData));
   const danger = { color: '#f00' };
 
   return (

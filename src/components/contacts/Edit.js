@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Edit = ({ obj, editFunc }) => {
   // const [update, setUpdate] = useState(true);
-  let localData = JSON.parse(localStorage.getItem('Contact'));
+  let localData = JSON.parse(localStorage.getItem('Contact-ListData'));
   const [data, setData] = useState(obj);
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -21,7 +21,7 @@ const Edit = ({ obj, editFunc }) => {
         localData[idx] = data;
       }
     });
-    localStorage.setItem('Contact', JSON.stringify(localData));
+    localStorage.setItem('Contact-ListData', JSON.stringify(localData));
     editFunc();
   };
   return (

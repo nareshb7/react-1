@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import Edit from './Edit';
 
 const ClientsList = () => {
-  const data = JSON.parse(localStorage.getItem('Contact'));
+  const data = JSON.parse(localStorage.getItem('Contact-ListData'));
   const [check, setCheck] = useState(true);
   const [edit, setEdit] = useState({});
 
   const deleteFunc = (idx) => {
     data.splice(idx, 1);
-    localStorage.setItem('Contact', JSON.stringify(data));
+    localStorage.setItem('Contact-ListData', JSON.stringify(data));
     setCheck(!check);
   };
   const editFunc = (idx) => {

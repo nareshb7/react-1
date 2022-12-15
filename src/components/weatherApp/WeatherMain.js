@@ -6,7 +6,7 @@ import { Link, Outlet, useNavigate } from 'react-router-dom';
 export const UserContext = createContext();
 const WeatherMain = () => {
   const navigate = useNavigate();
-  let previousData = JSON.parse(localStorage.getItem('WeatherUsers'));
+  let previousData = JSON.parse(localStorage.getItem('Weather-Users'));
   const [userData, setUserData] = useState(previousData?.userData || {});
   const [users, setUsers] = useState(previousData?.users || []);
   let val = { userData, setUserData, users, setUsers };
@@ -16,7 +16,7 @@ const WeatherMain = () => {
     userData.hasOwnProperty('fName') ? navigate('welcomepage') : navigate('login');
   }, []);
   useEffect(() => {
-    localStorage.setItem('WeatherUsers', JSON.stringify(val));
+    localStorage.setItem('Weather-Users', JSON.stringify(val));
   }, [val]);
   return (
     <UserContext.Provider value={val}>

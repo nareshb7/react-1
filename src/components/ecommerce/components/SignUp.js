@@ -15,13 +15,19 @@ const SignUp = () => {
     username: false,
     password: false,
   });
-
   const [valid, setValid] = useState(true);
-  //let valid = true
-
   const users = useSelector((state) => state.data.users);
   const [errors, setErrors] = useState({});
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    let { email, mobile, username, password } = checkObj;
+    if (email && mobile && username && password) {
+      setValid(false);
+    } else {
+      setValid(true);
+    }
+  }, [checkObj]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,12 +35,8 @@ const SignUp = () => {
     const emailPattern = /^[A-z][A-z0-9]+@[A-z0-9]+(?:[.][a-z]{2,})$/;
     const psdPattern =
       /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*-_+]).{8,}$/;
-
     switch (name) {
       case 'email':
-        // errors.email = !value.match(emailPattern) ? 'Enter Valid Email' : users.find(user=> user.email=== value) ? '': 'Try New Email Id'
-        // value.match(emailPattern) ? setCheckObj({...checkObj, email : true}) : setCheckObj({...checkObj, email : false})
-        // console.log(users.find(user=> user.email=== value), 'check')
         errors.email = '';
         if (value.match(emailPattern)) {
           if (users.find((user) => user.email === value)) {
@@ -73,25 +75,14 @@ const SignUp = () => {
       default:
         return;
     }
-    //console.log(errors, "errors")
     setErrors({ ...errors, [name]: errors[name] });
     setDetails({ ...details, [e.target.name]: e.target.value });
   };
-
-  useEffect(() => {
-    let { email, mobile, username, password } = checkObj;
-    if (email && mobile && username && password) {
-      setValid(false);
-    } else {
-      setValid(true);
-    }
-  }, [checkObj]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Hii ${details.username}, Account Created Sucessfully `);
     dispatch(Action(details));
-    console.log(details);
   };
   return (
     <div>

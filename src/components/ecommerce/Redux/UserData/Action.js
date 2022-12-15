@@ -1,4 +1,4 @@
-import { GET_DATA, CURRENTUSER, LOGOUT, UPDATE } from '../ActionType'
+import { GET_DATA, CURRENTUSER, LOGOUT, UPDATE } from './ActionType'
 
 export const Action =(value)=> {
   return {

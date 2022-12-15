@@ -39,6 +39,7 @@ const SignUp = () => {
       case 'email':
         errors.email = '';
         if (value.match(emailPattern)) {
+          console.log(users.find((user) => user.email === value), 'check 42')
           if (users.find((user) => user.email === value)) {
             errors.email = 'Try New Email Id';
           } else {

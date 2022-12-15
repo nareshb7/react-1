@@ -3,7 +3,7 @@ import { ADD_TO_CART, INCREASE, DECREASE, DELETE, EMPTYCART } from './CartAction
 const cartInititalState = {
     cartItems: []
 }
-const CartItems = JSON.parse(localStorage.getItem('CartItems'))
+const CartItems = JSON.parse(localStorage.getItem('Ecom-CartItems'))
 if (CartItems){
     cartInititalState.cartItems= CartItems
 }
@@ -24,7 +24,7 @@ const CartReducer = (state = cartInititalState, action) => {
                 alert(`It's Already added to your cart`)
                 return state
             }
-            localStorage.setItem('CartItems',JSON.stringify([...state.cartItems, action.payload]))
+            localStorage.setItem('Ecom-CartItems',JSON.stringify([...state.cartItems, action.payload]))
             return {
                 ...state,
                 cartItems: [...state.cartItems, action.payload]
@@ -36,7 +36,7 @@ const CartReducer = (state = cartInititalState, action) => {
                     item.amount = item.price * item.quantity
                 }
             })
-            localStorage.setItem('CartItems', JSON.stringify(updated))
+            localStorage.setItem('Ecom-CartItems', JSON.stringify(updated))
             return {
                 ...state,
                 cartItems: updated
@@ -48,7 +48,7 @@ const CartReducer = (state = cartInititalState, action) => {
                     item.amount = item.price * item.quantity
                 }
             })
-            localStorage.setItem('CartItems', JSON.stringify(updated))
+            localStorage.setItem('Ecom-CartItems', JSON.stringify(updated))
             return {
                 ...state,
                 cartItems: updated
@@ -60,13 +60,13 @@ const CartReducer = (state = cartInititalState, action) => {
                     return
                 }
             })
-            localStorage.setItem('CartItems', JSON.stringify(updated))
+            localStorage.setItem('Ecom-CartItems', JSON.stringify(updated))
             return {
                 ...state,
                 cartItems: updated
             }
         case EMPTYCART: 
-            localStorage.setItem('CartItems', JSON.stringify([]))
+            localStorage.setItem('Ecom-CartItems', JSON.stringify([]))
             return {
                 ...state,
                 cartItems : []

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Calculator = () => {
+  // Check
   const [ipt, setIpt] = useState('');
   const [val1, setVal1] = useState('');
   const [result, setResult] = useState('');

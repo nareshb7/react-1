@@ -15,7 +15,7 @@ const Home = () => {
       /> */}
       {/* <ManualCarousel /> */}
       <Carousel />
-      <Footer />
+  
     </div>
     //https://img.freepik.com/free-photo/abstract-textured-backgound_1258-30436.jpg?w=2000
   );

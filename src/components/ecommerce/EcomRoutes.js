@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import SignUp from './components/SignUp';
@@ -18,16 +18,17 @@ import Bill from './components/Bill';
 
 const EcomRoutes = () => {
   return (
-    <div className="outlet" style={{bacvground:'#fff'}}>
-      <Routes >
+    <div className="outlet" style={{ bacvground: '#fff' }}>
+      <Routes>
+        <Route path="/" element={<Navigate to="page1" />} />
+        <Route path="page1" element={<Page1 />} />
         <Route path="nav-bar" element={<Navbar />} />
         <Route path="signup" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="login" element={<Login />} />
         <Route path="home" element={<Home />} />
         <Route path="products" element={<Products />} />
         <Route path="productCard" element={<ProductCard />} />
         <Route path="cart" element={<Cart />} />
-        <Route path="/page1" element={<Page1 />} />
         <Route path="details" element={<Details />} />
         <Route path="checkout" element={<CheckOut />} />
         <Route path="page2" element={<Page2 />} />

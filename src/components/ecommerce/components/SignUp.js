@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { Action } from '../Redux';
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const [details, setDetails] = useState({
     username: '',
     email: '',
@@ -32,16 +34,20 @@ const SignUp = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     const mblpattern = /^[0-9]{10}$/;
-    const emailPattern = /^[A-z][A-z0-9]+@[A-z0-9]+(?:[.][a-z]{2,})$/;
+    const emailPattern = /^[A-z][A-z0-9]+@[A-z0-9]+(?:[.][a-z]{2,})+$/;
     const psdPattern =
       /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*-_+]).{8,}$/;
     switch (name) {
       case 'email':
         errors.email = '';
         if (value.match(emailPattern)) {
-          console.log(users.find((user) => user.email === value), 'check 42')
+          console.log(
+            users.find((user) => user.email === value),
+            'check 42'
+          );
           if (users.find((user) => user.email === value)) {
             errors.email = 'Try New Email Id';
+            setCheckObj({ ...checkObj, email: false });
           } else {
             setCheckObj({ ...checkObj, email: true });
           }
@@ -84,6 +90,7 @@ const SignUp = () => {
     e.preventDefault();
     alert(`Hii ${details.username}, Account Created Sucessfully `);
     dispatch(Action(details));
+    navigate('/ecom/login');
   };
   return (
     <div>

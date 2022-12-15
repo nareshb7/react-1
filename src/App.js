@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 import RoutesComp from './RoutesComp';
 
 
@@ -14,6 +15,7 @@ export default function App() {
       <div className="outlet">
         <RoutesComp />
       </div>
+      <Footer />
     </div>
   );
 }

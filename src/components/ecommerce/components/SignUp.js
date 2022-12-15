@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Action } from '../Redux';
 
@@ -77,16 +76,16 @@ const SignUp = () => {
     //console.log(errors, "errors")
     setErrors({ ...errors, [name]: errors[name] });
     setDetails({ ...details, [e.target.name]: e.target.value });
-    validFun();
   };
-  const validFun = async () => {
+
+  useEffect(() => {
     let { email, mobile, username, password } = checkObj;
     if (email && mobile && username && password) {
       setValid(false);
     } else {
       setValid(true);
     }
-  };
+  }, [checkObj]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

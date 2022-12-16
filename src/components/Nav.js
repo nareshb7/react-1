@@ -71,10 +71,13 @@ const Nav = () => {
           <NavLink to="weatherapp">Weather App </NavLink>
         </li>
         <li>
-          <NavLink to='formik' >Formik</NavLink>
+          <NavLink to="formik">Formik</NavLink>
         </li>
         <li>
-          <NavLink to='ecom' >E commerce</NavLink >
+          <NavLink to="ecom">E commerce</NavLink>
+        </li>
+        <li>
+          <NavLink to="todo">Todo App</NavLink>
         </li>
       </ul>
     </nav>

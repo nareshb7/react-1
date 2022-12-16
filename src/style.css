@@ -10,8 +10,8 @@
   display: flex;
   justify-content: space-evenly;
   background-color: #666;
-  padding: 20px;
-  margin-block: 10px;
+  padding-block: 10px;
+  margin-block: 30px;
 }
 .carouselDiv img {
   width: 100%;

@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
 
 const TodoData = ({ todoData, updateFunc }) => {
+
   const [data, setData] = useState(todoData);
+  const [render, setRender] = useState(true);
   useEffect(() => {
     setData(todoData);
   }, [todoData]);
-  const deleteFunc = (data) => {
-    let newTodoData = todoData.filter((val) => val.input != data.input);
-    setData(newTodoData);
+  const deleteFunc = (data, idx) => {
+    todoData.splice(idx, 1);
+    setRender(!render);
   };
   const completeFunc = (data) => {
-    let newData = todoData.map((val) => {
+    todoData.forEach((val) => {
       if (val.input == data.input) {
         val.isComplete = true;
       }
-      return val;
     });
-    setData(newData);
+    setRender(!render);
   };
   return (
     <div>
@@ -35,7 +36,6 @@ const TodoData = ({ todoData, updateFunc }) => {
         </thead>
         <tbody>
           {data.map((data, idx) => {
-            console.log(data, 'data');
             return (
               <tr key={idx}>
                 <td>
@@ -44,15 +44,23 @@ const TodoData = ({ todoData, updateFunc }) => {
                 <td>{data.input}</td>
                 <td>{data.description}</td>
                 <td>
-                  <button onClick={() => updateFunc(data)}>Update</button>{' '}
-                </td>
-                <td>
-                  <button disable="true" onClick={() => completeFunc(data)}>
-                    Complete
+                  <button
+                    disabled={data.isComplete}
+                    onClick={() => updateFunc(data)}
+                  >
+                    Update
                   </button>{' '}
                 </td>
                 <td>
-                  <button onClick={() => deleteFunc(data)}>Delete</button>{' '}
+                  <button
+                    disabled={data.isComplete}
+                    onClick={() => completeFunc(data)}
+                  >
+                    {data.isComplete ? 'Completed' : 'Complete'}
+                  </button>{' '}
+                </td>
+                <td>
+                  <button onClick={() => deleteFunc(data, idx)}>Delete</button>{' '}
                 </td>
               </tr>
             );

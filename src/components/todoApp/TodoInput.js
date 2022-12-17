@@ -47,7 +47,7 @@ const TodoInput = ({ handleFunc, updateData }) => {
             required
           />
         </div>
-        <button>Add</button>
+        <button>Add Task</button>
       </form>
     </div>
   );

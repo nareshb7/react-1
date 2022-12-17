@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Ex4 = () => {
-  const strtDate = '2021-10-21';
-  const endDate = '2022-10-21';
+  //Dynamic Width
+  const [screenSize, getDimension] = useState({
+    dynamicWidth: window.innerWidth,
+    dynamicHeight: window.innerHeight,
+  });
+  const setDimension = () => {
+    getDimension({
+      dynamicWidth: window.innerWidth,
+      dynamicHeight: window.innerHeight,
+    });
+  };
 
+  useEffect(() => {
+    window.addEventListener('resize', setDimension);
+    return () => {
+      window.removeEventListener('resize', setDimension);
+    };
+  }, [screenSize]);
+  console.log(screenSize, 'screenSize');
   return (
     <div>
-      <h2></h2>
+      <h2
+        style={{
+          width: screenSize.dynamicWidth <= 720 ? '100%' : 'calc(100% - 100px)',
+        }}
+      >
+        Example 4
+      </h2>
     </div>
   );
 };

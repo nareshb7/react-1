@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const TodoData = ({ todoData, updateFunc }) => {
-
   const [data, setData] = useState(todoData);
   const [render, setRender] = useState(true);
   useEffect(() => {
@@ -19,19 +18,39 @@ const TodoData = ({ todoData, updateFunc }) => {
     });
     setRender(!render);
   };
+  let checkBoxes = [];
+  const checkBoxCheck = (e) => {
+    checkBoxes = document.getElementsByName('checkBoxes');
+    checkBoxes.forEach((c) => (c.checked = e.target.checked));
+  };
+  const dltCheckBox = () => {
+    let dltArr = [];
+    checkBoxes.forEach((c) => {
+      c.checked && dltArr.unshift(c);
+    });
+    let cnfrm = confirm('Do u want to delet selected task"s?');
+    if (cnfrm) {
+      dltArr.forEach((val) => {
+        todoData.splice(val.value, 1);
+      });
+    }
+    setRender(!render);
+  };
   return (
     <div>
       <table>
         <thead>
           <tr>
             <th>
-              <input type="checkbox" />{' '}
+              <input type="checkbox" onChange={checkBoxCheck} />
             </th>
             <th>Name</th>
             <th>Description</th>
             <th>Update</th>
             <th>Complete</th>
-            <th>Delete</th>
+            <th>
+              <span onClick={dltCheckBox}>Delete</span>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -39,7 +58,7 @@ const TodoData = ({ todoData, updateFunc }) => {
             return (
               <tr key={idx}>
                 <td>
-                  <input type="checkbox" />{' '}
+                  <input type="checkbox" name="checkBoxes" value={idx} />
                 </td>
                 <td>{data.input}</td>
                 <td>{data.description}</td>
@@ -49,7 +68,7 @@ const TodoData = ({ todoData, updateFunc }) => {
                     onClick={() => updateFunc(data)}
                   >
                     Update
-                  </button>{' '}
+                  </button>
                 </td>
                 <td>
                   <button
@@ -57,14 +76,14 @@ const TodoData = ({ todoData, updateFunc }) => {
                     onClick={() => completeFunc(data)}
                   >
                     {data.isComplete ? 'Completed' : 'Complete'}
-                  </button>{' '}
+                  </button>
                 </td>
                 <td>
-                  <button onClick={() => deleteFunc(data, idx)}>Delete</button>{' '}
+                  <button onClick={() => deleteFunc(data, idx)}>Delete</button>
                 </td>
               </tr>
             );
-          })}{' '}
+          })}
         </tbody>
       </table>
     </div>

@@ -6,7 +6,12 @@ const Ex4 = () => {
     dynamicWidth: window.innerWidth,
     dynamicHeight: window.innerHeight,
   });
+  const [randomColor, setRandomColor] = useState('ccc');
   const setDimension = () => {
+    let min = 100;
+    let max = 999;
+    let random = (Math.random() * (max - min) + min).toFixed();
+    setRandomColor(random);
     getDimension({
       dynamicWidth: window.innerWidth,
       dynamicHeight: window.innerHeight,
@@ -19,7 +24,6 @@ const Ex4 = () => {
       window.removeEventListener('resize', setDimension);
     };
   }, [screenSize]);
-  console.log(screenSize, 'screenSize');
   return (
     <div>
       <h2
@@ -29,6 +33,9 @@ const Ex4 = () => {
       >
         Example 4
       </h2>
+      <h1 style={{ backgroundColor: `#${randomColor}` }}>
+        Dynamic Color (resize the Window){' '}
+      </h1>
     </div>
   );
 };

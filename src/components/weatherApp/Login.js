@@ -4,6 +4,7 @@ import { UserContext } from './WeatherMain';
 
 const Login = () => {
   const { users, setUserData } = useContext(UserContext);
+  const [isHide, setIsHide] = useState(true);
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const [creds, setCreds] = useState({
@@ -26,6 +27,9 @@ const Login = () => {
       setError('Data Not Found');
     }
   };
+  const hideShow = () => {
+    setIsHide(!isHide);
+  };
   return (
     <div>
       <div>
@@ -37,14 +41,24 @@ const Login = () => {
           placeholder="Enter Mobile Number"
         />
       </div>
-      <div>
+      <div style={{ position: 'relative', display: 'inline-block' }}>
         <input
-          type="password"
+          type={isHide ? 'password' : 'text'}
           name="password"
           value={creds.password}
           onChange={handleChange}
           placeholder="Enter Password"
         />
+        <span
+          className={isHide ? 'fa fa-eye-slash' : 'fa fa-eye'}
+          onClick={hideShow}
+          style={{
+            position: 'absolute',
+            fontSize: '24px',
+            top: '15px',
+            right: '5%',
+          }}
+        ></span>
       </div>
       <div>{error}</div>
       <div>

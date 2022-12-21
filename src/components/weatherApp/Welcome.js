@@ -12,7 +12,7 @@ const Welcome = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    userData.hasOwnProperty('fName') ? '' : navigate('/weatherapp/login');
+    userData.hasOwnProperty('fName') && navigate('/weatherapp/login');
   }, [userData]);
 
   const fetchFunc = async (city) => {
@@ -22,9 +22,9 @@ const Welcome = () => {
       .then((response) => response.json())
       .then((data) => {
         setResult(data);
-        setLoading(false)
+        setLoading(false);
       });
-    setLoading(true)
+    setLoading(true);
   };
   const logOutFunc = () => {
     setUserData({});

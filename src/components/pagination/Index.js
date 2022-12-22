@@ -13,6 +13,7 @@ export default function Index() {
     const lastPageIndex = firstPageIndex + PageSize;
     return data.slice(firstPageIndex, lastPageIndex);
   }, [currentPage]);
+  // Just Change the sample value to false to true , It will Open another pagination example
   const [sample, setSample] = useState(false);
 
   return (

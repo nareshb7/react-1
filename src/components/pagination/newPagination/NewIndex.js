@@ -10,8 +10,8 @@ const NewIndex = () => {
     setCurrentData(data.slice(currentPage * 10, currentPage * 10 + 10));
   }, [currentPage]);
 
-  const showDataFunc = (page, prop) => {
-    switch (prop) {
+  const showDataFunc = (page, operator) => {
+    switch (operator) {
       case '-':
         page <= 0 ? setCurrentPage(0) : setCurrentPage(page - 1);
         break;
@@ -46,7 +46,7 @@ const NewIndex = () => {
         </tbody>
       </table>
       <button onClick={() => showDataFunc(currentPage, '-')}>Back </button>
-      <span>{currentPage +1} </span>
+      <span>{currentPage + 1} </span>
       <span> of Page : {lastPage + 1}</span>
       <button onClick={() => showDataFunc(currentPage, '+')}>Next </button>
     </div>

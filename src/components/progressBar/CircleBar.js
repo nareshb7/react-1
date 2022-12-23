@@ -11,6 +11,7 @@ const CircleBar = () => {
             width: '200px',
             height: '200px',
             backgroundColor: '#00f',
+            position: 'relative',
           }}
         >
           <div
@@ -20,6 +21,7 @@ const CircleBar = () => {
               height: '180px',
               backgroundColor: '#0ff',
               margin: '10px',
+              position: 'absolute',
             }}
           ></div>
         </div>

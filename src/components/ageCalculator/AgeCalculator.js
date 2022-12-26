@@ -6,6 +6,7 @@ const AgeCalculator = () => {
 
   const handleFunc = () => {
     //It checks with Ur DOB and Present Date and Calculates the Days...
+    // we calculated per month as 31 days
     let d = new Date(dob).getTime();
     let today = new Date().getTime();
     let res = today - d;

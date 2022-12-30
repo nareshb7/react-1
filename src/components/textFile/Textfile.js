@@ -11,7 +11,6 @@ const TextFile = () => {
 
   const dummyFunc = () => {
     var row_width = 40;
-//ok we wil do 
     var content = '';
     content += 'Username' + new Array(row_width + 1).join(' ') + 'Password\n';
     content += '********' + new Array(row_width + 1).join(' ') + '********\n';
@@ -27,8 +26,8 @@ const TextFile = () => {
     let uri = 'data:application/octet-stream,' + encodeURIComponent(content);
 
     // Click on the file to download
-    location.download = 'textfile.txt'
-    console.log(uri, 'uriu')
+    location.download = 'textfile.txt';
+    console.log(uri, 'uriu');
     // You can also do this as a button that has the href pointing to the data URI
     location.href = uri;
   };

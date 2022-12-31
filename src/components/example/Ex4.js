@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Ex4 = () => {
+  const [check, setCheck] = useState(true);
   const [screenSize, getDimension] = useState({
     dynamicWidth: window.innerWidth,
     dynamicHeight: window.innerHeight,

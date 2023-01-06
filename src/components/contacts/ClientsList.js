@@ -8,7 +8,6 @@ const ClientsList = () => {
 
   const deleteFunc = (idx) => {
     // we are pasing the index to data  to delete the particular index item
-    let index = idx
     data.splice(idx, 1);
     localStorage.setItem('Contact-ListData', JSON.stringify(data));
     setCheck(!check);

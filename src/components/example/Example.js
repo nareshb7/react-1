@@ -67,8 +67,8 @@ const Example = () => {
         <Palindrome />
       </div> */}
       {/* <Ex4 /> */}
-      <div>{isUpdate ? <button>Update</button> : <button>Add</button>}</div>
-      <button onClick={() => setIsUpdate(!isUpdate)}>Edit</button>
+      {/* <div>{isUpdate ? <button>Update</button> : <button>Add</button>}</div>
+      <button onClick={() => setIsUpdate(!isUpdate)}>Edit</button> */}
       <Ex5 />
     </div>
   );

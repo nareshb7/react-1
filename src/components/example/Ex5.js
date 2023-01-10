@@ -2,15 +2,15 @@ import React from 'react';
 
 const Ex5 = () => {
   let obj = {
-    type: 'preservation',
-    connection: 'Physcal Device',
+    type: 'forensic',
+    connection: 'macOS System',
     macOS: 'yes',
     IOS: 'yes',
     desc: 'description',
     support: 'support',
   };
   let obj1 = {
-    type: 'forensic',
+    type: 'preservation',
     connection: 'Physcal Device',
     macOS: 'yes',
     IOS: 'yes',
@@ -22,7 +22,7 @@ const Ex5 = () => {
   let arr1 = [obj1, obj1, obj1, obj1, obj1];
 
   let mainObj = { forensic: arr, preservation: arr1 };
-  console.log(mainObj, 'arrr');
+  let main = [{ forensic: arr }, { preservation: arr1 }];
   return (
     <div>
       <table>

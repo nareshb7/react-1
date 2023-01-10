@@ -12,6 +12,7 @@ const Example = () => {
   let filterData = days.filter((day) => day !== 'wed');
   const [imgSrc, setSrc] = useState('');
   const [fileUrl, setImageUrl] = useState('');
+  const [isUpdate, setIsUpdate] = useState(false);
 
   const downloadImage = async () => {
     const fileUrl =
@@ -64,7 +65,9 @@ const Example = () => {
       <div>
         <Palindrome />
       </div> */}
-      <Ex4 />
+      {/* <Ex4 /> */}
+      <div>{isUpdate ? <button>Update</button> : <button>Add</button>}</div>
+      <button onClick={() => setIsUpdate(!isUpdate)}>Edit</button>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import Example2 from './Example2';
 import Ex3 from './Ex3';
 import Palindrome from './Palindrome';
 import Ex4 from './Ex4';
+import Ex5 from './Ex5';
 
 const Example = () => {
   const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'july'];
@@ -68,6 +69,7 @@ const Example = () => {
       {/* <Ex4 /> */}
       <div>{isUpdate ? <button>Update</button> : <button>Add</button>}</div>
       <button onClick={() => setIsUpdate(!isUpdate)}>Edit</button>
+      <Ex5 />
     </div>
   );
 };

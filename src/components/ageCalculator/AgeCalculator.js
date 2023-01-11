@@ -5,16 +5,22 @@ const AgeCalculator = () => {
   const [result, setResult] = useState('');
 
   const handleFunc = () => {
-    //It checks with Ur DOB and Present Date and Calculates the Days...
+    //It checks Ur DOB with Present Date and Calculates the Days...
     // we calculated per month as 31 days
     let d = new Date(dob).getTime();
     let today = new Date().getTime();
     let res = today - d;
     console.log(res);
     let tdays = res / (86400 * 1000);
-    let years = Math.floor(tdays / 365);
-    let months = Math.floor((tdays % 365) / 31);
-    let days = Math.floor((tdays % 365) % 31);
+
+    let years = Math.floor(tdays / 365.24);
+    let months = Math.floor((tdays % 365) / 30);
+    let days = Math.floor((tdays % 365.2) % 31);
+    let remDays = Math.floor(tdays - years * 365.24);
+    console.log('rem days', remDays);
+    console.log(tdays, 'days');
+    // console.log((tdays / 365.24) % 31, Math.floor((tdays / 365.24) % 31));
+
     setResult(`${years} Years ${months} Months ${days} Days`);
   };
 

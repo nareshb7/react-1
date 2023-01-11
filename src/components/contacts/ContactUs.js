@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 const Contact = () => {
-  const previousData = JSON.parse(localStorage.getItem('Contact-ListData')) || [];
+  const previousData =
+    JSON.parse(localStorage.getItem('Contact-ListData')) || [];
   const [localData, setLocalData] = useState(previousData);
   const [valid, setValid] = useState(false);
   const [data, setData] = useState({

@@ -13,7 +13,7 @@ const AgeCalculator = () => {
     console.log(res);
     let tdays = res / (86400 * 1000);
     let years = Math.floor(tdays / 365);
-    let months = Math.floor((tdays % 365) / 30);
+    let months = Math.floor((tdays % 365) / 31);
     let days = Math.floor((tdays % 365) % 31);
     setResult(`${years} Years ${months} Months ${days} Days`);
   };

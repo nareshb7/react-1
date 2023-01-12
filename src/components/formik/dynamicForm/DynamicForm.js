@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik, Form, Field, FieldArray } from 'formik';
+import { Formik, Form, Field, FieldArray, ErrorMessage } from 'formik';
 
 const DynamicForm = () => {
   const submitFunc = (fields) => {
@@ -24,12 +24,17 @@ const DynamicForm = () => {
   };
   const validateFunc = ({ numberOfPersons, persons }) => {
     console.log(numberOfPersons, persons, 'validate');
-    let obj = { name: '', location: '' };
-    persons.map((person) => {
+    let obj = {};
+    persons.forEach((person, idx) => {
+      obj[idx] = {};
       if (person.name.length < 3) {
-        obj.name = 'Min 3 Chars required';
+        obj[idx].name = 'Min 3 Chars required';
+      }
+      if (person.location.length < 3) {
+        obj[idx].location = 'yes locate';
       }
     });
+    console.log(obj, 'obj');
     return obj;
   };
   return (
@@ -68,10 +73,12 @@ const DynamicForm = () => {
                         name={`persons.${idx}.name`}
                         placeholder="Enter Name"
                       />
+                      <div>{errors[idx]?.['name']}</div>
                       <Field
                         name={`persons.${idx}.location`}
                         placeholder="Enter Location"
                       />
+                      <div>{errors[idx]?.['location']}</div>
                     </div>
                   );
                 })

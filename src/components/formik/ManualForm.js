@@ -4,17 +4,23 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 const ManualForm = () => {
   const validateFunc = ({ name, mobile, password }) => {
     let obj = { name: '', mobile: '', password: '' };
-    if (!mobile.match(/^[\d]{10}$/)) {
-      obj.mobile = '10 digits';
-    }
-    if (name.length < 3) {
-      obj.name = 'Min. 3 Characters';
-    }
     const psdPattern = /^[\d]{8,}$/;
-    if (!password.match(psdPattern)) {
-      obj.password = 'Min 8 digits required';
+    if (
+      !mobile.match(/^[\d]{10}$/) ||
+      name.length < 3 ||
+      !password.match(psdPattern)
+    ) {
+      if (!mobile.match(/^[\d]{10}$/)) {
+        obj.mobile = '10 digits';
+      }
+      if (name.length < 3) {
+        obj.name = 'Min. 3 Characters';
+      }
+      if (!password.match(psdPattern)) {
+        obj.password = 'Min 8 digits required';
+      }
+      return obj;
     }
-    return obj;
   };
   const handleSubmit = (value) => {
     console.log(value, 'value');

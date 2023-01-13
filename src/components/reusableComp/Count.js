@@ -32,6 +32,12 @@ const Count = () => {
         color="#fff"
         bgcolor="#000"
       />
+      <Button
+        title="Delete"
+        func={() => alert('This is Just Button')}
+        color="#000"
+        bgcolor="#d00"
+      />
     </div>
   );
 };

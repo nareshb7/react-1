@@ -69,7 +69,7 @@ const Calculator = () => {
     setOperator('');
   };
   const backFunc = () => {
-    alert("Button Does n't working");
+    alert('Button is Suffering with fever');
     console.log(value, 'valueeee');
   };
 

@@ -79,6 +79,9 @@ const Nav = () => {
         <li>
           <NavLink to="todo">Todo App</NavLink>
         </li>
+        <li>
+          <NavLink to="css/">Css Styles </NavLink>
+        </li>
       </ul>
     </nav>
   );

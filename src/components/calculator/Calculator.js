@@ -14,7 +14,8 @@ const Calculator = () => {
   const handleClick = (val) => {
     setValue(value.concat(val));
     setIpt(ipt.concat(val));
-    setDisable(false);
+    setDisable(false)
+    console.log(val, "val")
     if (isValOne) {
       setVal1(ipt.concat(val));
     } else {

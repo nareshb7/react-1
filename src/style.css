@@ -23,7 +23,7 @@ a {
   text-decoration: none;
 }
 .active {
-  text-decoration: underline;
+  text-decoration: none;
   color: #00f;
 }
 .contactForm input {

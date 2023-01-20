@@ -7,6 +7,7 @@ import Palindrome from './Palindrome';
 import Ex4 from './Ex4';
 import Ex5 from './Ex5';
 import CheckBoxEx from './CheckBoxEx';
+import IpAdrs from './IpAdrs';
 
 const Example = () => {
   const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'july'];
@@ -72,6 +73,7 @@ const Example = () => {
       <button onClick={() => setIsUpdate(!isUpdate)}>Edit</button> */}
       {/* <Ex5 /> */}
       <CheckBoxEx />
+      <IpAdrs />
     </div>
   );
 };

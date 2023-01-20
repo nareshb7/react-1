@@ -9,7 +9,13 @@ const CssNav = () => {
           <NavLink to="textWriter">TextWriter</NavLink>
         </li>
         <li>
-          <NavLink to="loader1"> Loader </NavLink>
+          <NavLink to="loader1"> Loader1 </NavLink>
+        </li>
+        <li>
+          <NavLink to="loader2"> Loader2 </NavLink>
+        </li>
+        <li>
+          <NavLink to="btn1">Button 1 </NavLink>
         </li>
       </ul>
     </nav>

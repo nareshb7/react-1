@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Login from './Login';
 import SignUp from './SignUp';
 import { UserContext } from './WeatherMain';
+import Loader2 from '../css/loader/loader2/Loader2';
 
 const Welcome = () => {
   const navigate = useNavigate();
@@ -49,7 +50,9 @@ const Welcome = () => {
       </div>
       <div>
         {loading ? (
-          <h3>Loading...</h3>
+          <h3>
+            <Loader2 />
+          </h3>
         ) : (
           <>
             {result?.message ? (

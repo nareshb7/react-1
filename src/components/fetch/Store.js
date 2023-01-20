@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Loader1 from '../css/loader/loader1/Loader1';
 
 const Store = () => {
   const URL = 'https://jsonplaceholder.typicode.com/photos/?_limit=100';
@@ -26,7 +27,9 @@ const Store = () => {
           })}
         </div>
       ) : (
-        <h1 style={{ textAlign: 'center' }}>Loading....</h1>
+        <h1 style={{ textAlign: 'center' }}>
+          <Loader1 />
+        </h1>
       )}
     </div>
   );

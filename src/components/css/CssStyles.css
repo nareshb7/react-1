@@ -1,3 +1,16 @@
+/* Animation ShortHand Property */
+
+/* div {
+  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate- normal - reverse;
+  animation-fill-mode : forwards - backwards - both
+  animation-play-state: running - paused
+} */
+
 .cssMain {
   background-color: rgb(71, 71, 155);
   min-height: 60vh;

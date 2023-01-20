@@ -1,0 +1,77 @@
+.loader2 {
+  position: relative;
+  width: 200px;
+  height: 80px;
+  margin: auto;
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+  font-size: 24px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: rgb(40, 40, 99);
+}
+.one {
+  left: 0;
+  background-color: #fff;
+  animation: bounce 0.47s linear 1s infinite alternate forwards;
+}
+.two {
+  left: 30px;
+  background-color: #ff0;
+  animation: bounce 0.5s linear 1s infinite alternate;
+}
+.three {
+  left: 60px;
+  background-color: #f0f;
+  animation: bounce 0.52s linear 1s infinite alternate;
+}
+.four {
+  left: 90px;
+  background-color: #0ff;
+  animation: bounce 0.53s linear 1s infinite alternate;
+}
+.five {
+  left: 120px;
+  background-color: #00f;
+  animation: bounce 0.54s linear 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0%;
+  }
+
+  100% {
+    top: 30%;
+  }
+}
+
+/* for 3 dots */
+
+.threedots {
+  position: relative;
+  animation: loading 0.7s linear 0.5s infinite alternate;
+  width: 200px;
+  margin: auto;
+  white-space: nowrap;
+  /* overflow: hidden; */
+  display: inline-block;
+}
+.threedots span {
+  position: initial;
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 150px;
+  }
+}

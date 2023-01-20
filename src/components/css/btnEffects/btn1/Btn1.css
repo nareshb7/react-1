@@ -1,0 +1,14 @@
+.btn1-container {
+  position: relative;
+}
+
+button.btn1 {
+  background-image: linear-gradient(to right, #9e9e20, #00f);
+  border: none;
+  border-radius: 30px;
+}
+.btn1:hover {
+  box-shadow: 0 0 20px #fff, 0 10px 20px #00f;
+  border-block: 1px solid #00f;
+  border-inline: 1px solid #ff0;
+}

@@ -5,8 +5,8 @@ const Btn1 = () => {
   return (
     <div>
       <h1>Button : </h1>
-      <div>
-        <button>Button 1</button>
+      <div className="btn1-container">
+        <button className="btn1">Button 1</button>
       </div>
     </div>
   );

@@ -15,7 +15,13 @@ const CssNav = () => {
           <NavLink to="loader2"> Loader2 </NavLink>
         </li>
         <li>
+          <NavLink to="loader3">Loader3 </NavLink>
+        </li>
+        <li>
           <NavLink to="btn1">Button 1 </NavLink>
+        </li>
+        <li>
+          <NavLink to="downloadbar1">Download Bar 1</NavLink>
         </li>
       </ul>
     </nav>

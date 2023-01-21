@@ -21,6 +21,9 @@ const CssNav = () => {
           <NavLink to="btn1">Button 1 </NavLink>
         </li>
         <li>
+          <NavLink to="btn2">Button 2</NavLink>
+        </li>
+        <li>
           <NavLink to="downloadbar1">Download Bar 1</NavLink>
         </li>
       </ul>

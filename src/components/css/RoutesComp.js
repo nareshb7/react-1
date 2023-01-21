@@ -6,7 +6,8 @@ import Loader1 from './loader/loader1/Loader1';
 import Loader2 from './loader/loader2/Loader2';
 import Loader3 from './loader/loader3/Loader3';
 import Btn1 from './btnEffects/btn1/Btn1';
-import DownloadBar1 from './downloadBar/downloadBar1/DownloadBar1'
+import Btn2 from './btnEffects/btn2/Btn2';
+import DownloadBar1 from './downloadBar/downloadBar1/DownloadBar1';
 
 const CssRoutes = () => {
   console.log('is it workingg');
@@ -19,7 +20,8 @@ const CssRoutes = () => {
         <Route path="loader2" element={<Loader2 />} />
         <Route path="btn1" element={<Btn1 />} />
         <Route path="loader3" element={<Loader3 />} />
-        <Route path='downloadbar1' element={<DownloadBar1/> } />
+        <Route path="downloadbar1" element={<DownloadBar1 />} />
+        <Route path="btn2" element={<Btn2 />} />
       </Routes>
     </div>
   );

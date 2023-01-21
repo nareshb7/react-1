@@ -18,27 +18,27 @@
 .one {
   left: 0;
   background-color: #fff;
-  animation: bounce 0.47s linear 1s infinite alternate forwards;
+  animation: bounce 0.5s linear infinite alternate forwards;
 }
 .two {
   left: 30px;
   background-color: #ff0;
-  animation: bounce 0.5s linear 1s infinite alternate;
+  animation: bounce 0.5s linear 0.7s infinite alternate;
 }
 .three {
   left: 60px;
   background-color: #f0f;
-  animation: bounce 0.52s linear 1s infinite alternate;
+  animation: bounce 0.5s linear 1.5s infinite alternate;
 }
 .four {
   left: 90px;
   background-color: #0ff;
-  animation: bounce 0.53s linear 1s infinite alternate;
+  animation: bounce 0.5s linear 2.1s infinite alternate;
 }
 .five {
   left: 120px;
   background-color: #00f;
-  animation: bounce 0.54s linear 1s infinite alternate;
+  animation: bounce 0.5s linear 2.7s infinite alternate;
 }
 
 @keyframes bounce {

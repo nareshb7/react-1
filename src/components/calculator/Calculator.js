@@ -10,7 +10,7 @@ const Calculator = () => {
   const [value, setValue] = useState('');
   const [isValOne, setIsVal] = useState(true);
   const [disable, setDisable] = useState(false);
-
+console.log("hell")
   const handleClick = (val) => {
     setValue(value.concat(val));
     setIpt(ipt.concat(val));

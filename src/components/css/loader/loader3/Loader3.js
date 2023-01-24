@@ -4,6 +4,7 @@ import './Loader3.css';
 const Loader3 = () => {
   return (
     <div>
+      <h1>Loader 3:</h1>
       <div className="circle" id="circle1"></div>
       <div className="circle" id="circle2"></div>
       <div className="circle" id="circle3"></div>

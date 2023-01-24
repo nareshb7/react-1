@@ -26,6 +26,9 @@
   animation: animate 1s steps(40) infinite;
   background-image: linear-gradient(to right, #5bdb95, #fcb, rgb(168, 33, 78));
 }
+.done::after {
+  animation-play-state: paused;
+}
 @keyframes animate {
   0% {
     transform: rotate(0deg);

@@ -24,7 +24,7 @@
   height: 130px;
   border: 5px solid #999;
   animation: animate 1s steps(40) infinite;
-  background-image: linear-gradient(to right, #5bdb95, #fcb, rgb(168, 33, 78));
+  background-image: linear-gradient(to right, #5bdb95, #fcb, #8d1f43);
 }
 .done::after {
   animation-play-state: paused;

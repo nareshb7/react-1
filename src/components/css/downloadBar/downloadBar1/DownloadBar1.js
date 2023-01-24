@@ -13,7 +13,6 @@ const DownloadBar1 = () => {
   }, []);
   useEffect(() => {
     if (count == 100) {
-      console.log(count, 'count');
       clearInterval(val);
     }
   }, [count]);

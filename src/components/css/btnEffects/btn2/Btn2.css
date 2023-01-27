@@ -21,6 +21,7 @@
   position: absolute;
   width: 400px;
   height: 400px;
+  /* U can change linear to conic */
   background-image: linear-gradient(
     #2596be 0%,
     #2596be 25%,

@@ -1,0 +1,109 @@
+.mic-main {
+  position: relative;
+  height: 80vh;
+}
+.mic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.mic::after,
+.mic::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  z-index: 2;
+  box-shadow: 0 0 20px 20px #1c084f;
+}
+
+.mic::before {
+  width: 250px;
+  height: 250px;
+  background-color: #1c084e;
+}
+.mic::after {
+  width: 150px;
+  height: 150px;
+  background-color: #2f1e5f;
+  animation: circle-size 0.8s linear infinite alternate;
+}
+@keyframes circle-size {
+  from {
+    width: 150px;
+    height: 150px;
+  }
+  to {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.mic-icon {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(5);
+  display: block;
+  width: 8px;
+  height: 7px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid;
+  border-top: 0;
+  margin-top: 20px;
+  z-index: 3;
+}
+.mic-icon::before,
+.mic-icon::after {
+  content: '';
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+.mic-icon::before {
+  width: 1px;
+  height: 3px;
+  top: calc(100% + 1px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #fff;
+}
+.mic-icon::after {
+  border: 1px solid;
+  width: 4px;
+  height: 9px;
+  left: 50%;
+  top: -5px;
+  border-radius: 4px;
+  transform: translate(-50%, 0);
+}
+.mic-shadow {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  border-radius: 100%;
+  z-index: 1;
+  box-shadow: 5px -15px 10px 15px #823ca6, 14px -5px 27px 10px #aab3d2,
+    -11px -25px 37px 5px #5acee3, 21px 5px 17px 5px #1b7d8f,
+    3px 2px 7px 5px #f30bf5;
+  animation: shadow-rotate 1.5s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes shadow-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

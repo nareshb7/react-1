@@ -8,6 +8,7 @@ import Loader3 from './loader/loader3/Loader3';
 import Btn1 from './btnEffects/btn1/Btn1';
 import Btn2 from './btnEffects/btn2/Btn2';
 import DownloadBar1 from './downloadBar/downloadBar1/DownloadBar1';
+import VoiceSearch1 from './voiceSearch/VoiceSearch1';
 
 const CssRoutes = () => {
   console.log('is it workingg');
@@ -22,6 +23,7 @@ const CssRoutes = () => {
         <Route path="loader3" element={<Loader3 />} />
         <Route path="downloadbar1" element={<DownloadBar1 />} />
         <Route path="btn2" element={<Btn2 />} />
+        <Route path="voiceSearch1" element={<VoiceSearch1 />} />
       </Routes>
     </div>
   );

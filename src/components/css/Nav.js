@@ -26,6 +26,9 @@ const CssNav = () => {
         <li>
           <NavLink to="downloadbar1">Download Bar 1</NavLink>
         </li>
+        <li>
+          <NavLink to="voiceSearch1">VoiceSearch 1 </NavLink>
+        </li>
       </ul>
     </nav>
   );

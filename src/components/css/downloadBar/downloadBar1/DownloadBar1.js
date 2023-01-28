@@ -8,21 +8,23 @@ const DownloadBar1 = () => {
   const [restart, setRestart] = useState(true);
 
   const start = () => {
-    setVal(
-      setInterval(() => {
-        setCount((c) => c + 1);
-      }, 100)
-    );
+    if (count == 0) {
+      setVal(
+        setInterval(() => {
+          setCount((c) => c + 1);
+        }, 100)
+      );
+    }
   };
   useEffect(() => {
-    setCount(0);
-    setIsDone(false);
     start();
+    setIsDone(false)
   }, [restart]);
   useEffect(() => {
     if (count == 100) {
       clearInterval(val);
-      setIsDone(true);
+      setCount(0);
+      setIsDone(true)
     }
   }, [count]);
 
@@ -31,7 +33,7 @@ const DownloadBar1 = () => {
       <h3>Download Bar :</h3>
       <div className={isDone ? 'db1-bg done' : 'db1-bg'}>
         <div className="loader" onClick={() => setRestart(!restart)}>
-          {count == 100 ? 'Done' : `${count}%`}{' '}
+          {isDone ? 'Done' : `${count}%`}{' '}
         </div>
       </div>
     </div>

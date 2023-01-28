@@ -48,7 +48,7 @@
     transform: rotate(360deg);
   }
 }
-button {
+.btn2 {
   width: 292px;
   outline: none;
   border: none;

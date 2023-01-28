@@ -5,7 +5,7 @@ const Btn2 = () => {
   return (
     <div className="btn2-main">
       <div className="btn2-container">
-        <button>Hover Me...</button>
+        <button className="btn2">Hover Me...</button>
       </div>
     </div>
   );

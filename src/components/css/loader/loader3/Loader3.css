@@ -3,10 +3,10 @@
   height: 50px;
   position: relative;
   border-radius: 50%;
-  animation: animate 5s infinite;
+  animation: animates 5s infinite;
   display: inline-block;
 }
-@keyframes animate {
+@keyframes animates {
   50% {
     height: 100px;
     width: 100px;

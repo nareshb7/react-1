@@ -8,6 +8,7 @@ import Ex4 from './Ex4';
 import Ex5 from './Ex5';
 import CheckBoxEx from './CheckBoxEx';
 import IpAdrs from './IpAdrs';
+import GetLocalIp from './LocalIpAdrs'
 
 const Example = () => {
   const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'july'];
@@ -74,6 +75,7 @@ const Example = () => {
       {/* <Ex5 /> */}
       <CheckBoxEx />
       <IpAdrs />
+      <GetLocalIp />
     </div>
   );
 };

@@ -16,7 +16,7 @@ const UseMemo = () => {
   const handleClick = () => {
     console.log(ipt, 'ipt');
   };
-  // 
+  //
   const calculation = useMemo(() => expensiveCalculation(count), [count]);
   // const calculation = expensiveCalculation(count);
 
@@ -28,10 +28,10 @@ const UseMemo = () => {
           value={ipt}
           onChange={(e) => setIpt(e.target.value)}
         />
+        <button onClick={handleClick}>Add</button>
       </div>
       <div>
-        <button onClick={handleClick}>Add</button>
-        <button onClick={() => setCount((c) => c + 1)}>Add (useMemo)</button>
+        <button onClick={() => setCount((c) => c + 1)}>Add +1 (useMemo)</button>
       </div>
       <div> Calculated number : {calculation}</div>
     </div>

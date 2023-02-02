@@ -35,6 +35,7 @@ import ManualForm from './components/formik/ManualForm';
 import EcommerceMain from './components/ecommerce/Index';
 import TodoIndex from './components/todoApp/TodoIndex';
 import CssMain from './components/css/index';
+import Hooks from './components/hooks/Index';
 
 const RoutesComp = () => {
   return (
@@ -80,6 +81,7 @@ const RoutesComp = () => {
         <Route path="ecom/*" element={<EcommerceMain />}></Route>
         <Route path="todo" element={<TodoIndex />} />
         <Route path="css/*" element={<CssMain />}></Route>
+        <Route path="hooks/*" element={<Hooks />} />
       </Routes>
     </div>
   );

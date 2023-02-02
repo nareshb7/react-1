@@ -82,6 +82,9 @@ const Nav = () => {
         <li>
           <NavLink to="css/">Css Styles </NavLink>
         </li>
+        <li>
+          <NavLink to="hooks">Hooks</NavLink>
+        </li>
       </ul>
     </nav>
   );

@@ -13,7 +13,10 @@ const HooksNav = () => {
           <NavLink to="useRef">Use Ref</NavLink>
         </li>
         <li>
-          <NavLink to='usememo' >Use Memo</NavLink>
+          <NavLink to="usememo">Use Memo</NavLink>
+        </li>
+        <li>
+          <NavLink to="usecontext">Use Context</NavLink>
         </li>
       </ul>
     </nav>

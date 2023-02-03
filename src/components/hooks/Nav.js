@@ -18,6 +18,9 @@ const HooksNav = () => {
         <li>
           <NavLink to="usecontext">Use Context</NavLink>
         </li>
+        <li>
+          <NavLink to="usecallback">Use Callback </NavLink>
+        </li>
       </ul>
     </nav>
   );

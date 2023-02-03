@@ -4,7 +4,7 @@ import { store } from './Store';
 import ExRedux from './ExRedux';
 import CakeCounter from './CakeCounter';
 
-const ReduxExample = () => {
+const ReduxExample_1 = () => {
   return (
     <Provider store={store}>
       <ExRedux />
@@ -12,4 +12,4 @@ const ReduxExample = () => {
     </Provider>
   );
 };
-export default ReduxExample;
+export default ReduxExample_1;

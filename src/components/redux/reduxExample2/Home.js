@@ -17,6 +17,9 @@ const R2_Home = () => {
     dispatch(LogoutUser());
     setRender(!render);
   };
+  const updateFunc = () => {
+    navigate('/reduxexample/rexample2/re2updateuser');
+  };
   return (
     <div className="re2-home">
       <h1>Welcome {currentUser.name ? currentUser.name : 'User'}</h1>
@@ -45,6 +48,9 @@ const R2_Home = () => {
             {currentUser.password?.slice(-2)}
           </span>
         </h4>
+      </div>
+      <div>
+        <button onClick={updateFunc}>Update</button>
       </div>
       <div>
         <button onClick={logoutFunc}>LogOut</button>

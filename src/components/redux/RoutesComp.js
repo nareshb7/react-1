@@ -4,6 +4,7 @@ import ReduxExample_1 from './reduxExample1/Index';
 import ReduxExample_2 from './reduxExample2/Index';
 import R_UserForm from './reduxExample2/SignUpForm';
 import R_LoginForm from './reduxExample2/LoginForm';
+import R2_Home from './reduxExample2/Home';
 
 const ReduxRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const ReduxRoutes = () => {
         <Route path="rexample2" element={<ReduxExample_2 />}>
           <Route path="re2signup" element={<R_UserForm />} />
           <Route path="re2login" element={<R_LoginForm />} />
+          <Route path="re2home" element={<R2_Home />} />
         </Route>
       </Routes>
     </div>

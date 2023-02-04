@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { AddUser } from './redux/Actions';
 
 const R_UserForm = () => {
-  const [userdata, setUserData] = useState({
+  const dispatch = useDispatch();
+  const [response, setResponse] = useState('');
+  const [userData, setUserData] = useState({
     name: '',
     mobile: '',
     role: '',
@@ -11,11 +15,13 @@ const R_UserForm = () => {
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setUserData({ ...userdata, [name]: value });
+    setUserData({ ...userData, [name]: value });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(userdata, 'userdata');
+    console.log(userData, 'userData');
+    dispatch(AddUser(userData));
+    setResponse('Data added sucessfully');
   };
   return (
     <div>
@@ -25,7 +31,7 @@ const R_UserForm = () => {
           <input
             type="text"
             name="name"
-            value={userdata.name}
+            value={userData.name}
             onChange={handleChange}
             placeholder="Enter name here..."
             required
@@ -35,7 +41,7 @@ const R_UserForm = () => {
           <input
             type="text"
             name="mobile"
-            value={userdata.mobile}
+            value={userData.mobile}
             onChange={handleChange}
             placeholder="Enter mobile number here..."
             required
@@ -45,7 +51,7 @@ const R_UserForm = () => {
           <input
             type="text"
             name="role"
-            value={userdata.role}
+            value={userData.role}
             onChange={handleChange}
             placeholder="Enter role here..."
             required
@@ -55,7 +61,7 @@ const R_UserForm = () => {
           <input
             type="text"
             name="company"
-            value={userdata.company}
+            value={userData.company}
             onChange={handleChange}
             placeholder="Enter company name here..."
             required
@@ -65,7 +71,7 @@ const R_UserForm = () => {
           <input
             type="text"
             name="location"
-            value={userdata.location}
+            value={userData.location}
             onChange={handleChange}
             placeholder="Enter location here..."
             required
@@ -75,7 +81,7 @@ const R_UserForm = () => {
           <input
             type="text"
             name="password"
-            value={userdata.password}
+            value={userData.password}
             onChange={handleChange}
             placeholder="Enter password here..."
             required
@@ -85,6 +91,7 @@ const R_UserForm = () => {
           <button type="submit">Submit</button>
         </div>
       </form>
+      <h3>Status : {response}</h3>
     </div>
   );
 };

@@ -1,24 +1,28 @@
 import React from 'react';
-import R_UserForm from './SignUpForm';
 import { NavLink, Outlet } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import R_UserForm from './SignUpForm';
+import { R2_Store } from './redux/Store';
 
 const ReduxEx_2 = () => {
   return (
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <NavLink to="re2signup">SignUp form</NavLink>
-          </li>
-          <li>
-            <NavLink to="re2login">Login Form</NavLink>
-          </li>
-        </ul>
-      </nav>
+    <Provider store={R2_Store}>
       <div>
-        <Outlet />
+        <nav>
+          <ul>
+            <li>
+              <NavLink to="re2signup">SignUp form</NavLink>
+            </li>
+            <li>
+              <NavLink to="re2login">Login Form</NavLink>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <Outlet />
+        </div>
       </div>
-    </div>
+    </Provider>
   );
 };
 export default ReduxEx_2;

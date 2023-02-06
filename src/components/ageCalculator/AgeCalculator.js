@@ -10,6 +10,7 @@ const AgeCalculator = () => {
     let d = new Date(dob).getTime();
     let today = new Date().getTime();
     let res = today - d;
+console.log("ok")
     let tdays = Math.floor(res / (86400 * 1000));
     let years = Math.floor(tdays / 365.24);
     let remDays = Math.floor(tdays - years * 365.24);

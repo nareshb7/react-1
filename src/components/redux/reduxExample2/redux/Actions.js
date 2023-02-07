@@ -1,4 +1,4 @@
-import { ADDUSER, LOGIN, LOGOUT } from './ActionType';
+import { ADDUSER, LOGIN, LOGOUT, UPDATE } from './ActionType';
 
 export const AddUser = (userData) => {
   return {
@@ -15,5 +15,11 @@ export const LoginUser = (creds) => {
 export const LogoutUser = () => {
   return {
     type: LOGOUT,
+  };
+};
+export const UpdateUser = (data) => {
+  return {
+    type: UPDATE,
+    payload: data,
   };
 };

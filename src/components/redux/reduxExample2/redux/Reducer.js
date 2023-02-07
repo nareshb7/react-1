@@ -1,4 +1,4 @@
-import { ADDUSER, LOGIN, LOGOUT } from './ActionType';
+import { ADDUSER, LOGIN, LOGOUT, UPDATE } from './ActionType';
 
 const initialState = {
   users: [],
@@ -26,6 +26,20 @@ export const R2_Reducer = (state = initialState, action) => {
       return {
         ...state,
         currentUser: {},
+      };
+    }
+    case UPDATE: {
+      let newObj = JSON.parse(JSON.stringify(state.users));
+      let updated = newObj.map((user) => {
+        if (user.mobile == action.payload.mobile) {
+          return action.payload;
+        }
+        return user;
+      });
+      return {
+        ...state,
+        users: updated,
+        currentUser: action.payload,
       };
     }
     default:

@@ -12,6 +12,7 @@ const R2_Home = () => {
     if (!currentUser.hasOwnProperty('mobile')) {
       navigate('/reduxexample/rexample2/re2login');
     }
+    console.log(currentUser, 'curentuser');
   }, [currentUser]);
   const logoutFunc = () => {
     dispatch(LogoutUser());

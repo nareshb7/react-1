@@ -17,8 +17,8 @@ const R2_Home = () => {
     dispatch(LogoutUser());
     setRender(!render);
   };
-  const updateFunc = () => {
-    navigate('/reduxexample/rexample2/re2updateuser');
+  const updateFunc = (data) => {
+    navigate('/reduxexample/rexample2/re2updateuser', { state: data });
   };
   return (
     <div className="re2-home">
@@ -50,7 +50,7 @@ const R2_Home = () => {
         </h4>
       </div>
       <div>
-        <button onClick={updateFunc}>Update</button>
+        <button onClick={() => updateFunc(currentUser)}>Update</button>
       </div>
       <div>
         <button onClick={logoutFunc}>LogOut</button>

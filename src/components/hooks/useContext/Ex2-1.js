@@ -11,7 +11,7 @@ const ExampleTwo_1 = () => {
     e.preventDefault();
     console.log(data, 'data');
     setUsers([...users, data]);
-    setData({});
+    setData({ name: '', position: '' });
   };
   return (
     <div>

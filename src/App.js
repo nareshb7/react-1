@@ -9,6 +9,7 @@ import RoutesComp from './RoutesComp';
 
 
 export default function App() {
+  console.log('App starting....')
   return (
     <div>
       <Nav />

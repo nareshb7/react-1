@@ -15,8 +15,8 @@ const Example1 = () => {
 
   return (
     <div>
-      {}
-      Example1 check console
+      There is an array data in that filtering by staring letter Example1 check
+      console
     </div>
   );
 };

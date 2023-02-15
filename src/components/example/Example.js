@@ -8,7 +8,7 @@ import Ex4 from './Ex4';
 import Ex5 from './Ex5';
 import CheckBoxEx from './CheckBoxEx';
 import IpAdrs from './IpAdrs';
-import GetLocalIp from './LocalIpAdrs'
+import GetLocalIp from './LocalIpAdrs';
 
 const Example = () => {
   const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'july'];
@@ -44,38 +44,15 @@ const Example = () => {
   };
   return (
     <div>
-      {/* {filterData.map((val) => (
+      {filterData.map((val) => (
         <h1>{val}</h1>
-      ))} */}
-      {/* <h2>Example : </h2>
+      ))}
+      <h2>Example : </h2>
       <input type="file" onChange={handleChange} />
-      <button onClick={downloadImage}>Click to Download Image</button> */}
-      {/* <div style={{ width: '300px', height: '400px' }}>
+      <button onClick={downloadImage}>Click to Download Image</button>
+      <div style={{ width: '300px', height: '400px' }}>
         <img src={imgSrc} alt="image" width="100%" height="100%" />
-      </div> */}
-      {/* <Example1 /> */}
-      {/* <div>
-        <h2>Example 1: </h2>
-        <Example1 />
       </div>
-
-      <div>
-        <h2>Example 2: (Add Update Delete) </h2>
-        <Example2 />
-      </div>
-      <div>
-        <Ex3 />
-      </div>
-      <div>
-        <Palindrome />
-      </div> */}
-      {/* <Ex4 /> */}
-      {/* <div>{isUpdate ? <button>Update</button> : <button>Add</button>}</div>
-      <button onClick={() => setIsUpdate(!isUpdate)}>Edit</button> */}
-      {/* <Ex5 /> */}
-      <CheckBoxEx />
-      <IpAdrs />
-      <GetLocalIp />
     </div>
   );
 };

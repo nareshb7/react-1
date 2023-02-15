@@ -31,7 +31,8 @@ const Ex4 = () => {
           width: screenSize.dynamicWidth <= 720 ? '100%' : 'calc(100% - 100px)',
         }}
       >
-        Example 4
+        Example 4 : Width: {screenSize.dynamicWidth} Height:{' '}
+        {screenSize.dynamicHeight}
       </h2>
       <h1 style={{ backgroundColor: `#${randomColor}` }}>
         Dynamic Color (resize the Window){' '}

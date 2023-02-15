@@ -21,6 +21,7 @@ const Example2 = () => {
 
   return (
     <div>
+      <h3>Simple Edit and Update Function</h3>
       <div>
         <input
           type="text"

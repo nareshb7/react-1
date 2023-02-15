@@ -12,7 +12,7 @@ import Comp3 from './components/NestedRouting/Comp3';
 import ClothHome from './components/clothStore/ClothHome';
 import Cart from './components/clothStore/Cart';
 import ReduxIndex from './components/redux/Index';
-import Example from './components/example/Example';
+import ExampleIndex from './components/example/Index';
 import Count from './components/reusableComp/Count';
 import LineBar from './components/progressBar/LineBar';
 import Calculator from './components/calculator/Calculator';
@@ -56,7 +56,7 @@ const RoutesComp = () => {
           <Route path="cart" element={<Cart />} />
         </Route>
         <Route path="reduxexample/*" element={<ReduxIndex />} />
-        <Route path="example" element={<Example />} />
+        <Route path="example/*" element={<ExampleIndex />} />
         <Route path="reusable" element={<Count />} />
         <Route path="progressbar" element={<LineBar />} />
         <Route path="calculator" element={<Calculator />} />

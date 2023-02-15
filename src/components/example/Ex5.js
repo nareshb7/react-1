@@ -25,6 +25,7 @@ const Ex5 = () => {
   let main = [{ forensic: arr }, { preservation: arr1 }];
   return (
     <div>
+      <h3>Created an Array of object based on the table format</h3>
       <table>
         <thead>
           <tr>

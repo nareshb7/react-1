@@ -29,6 +29,19 @@ const Contact = () => {
     }
   }, [error]);
 
+  const convertToBase64 = async (file) => {
+    let result = await new Promise((resolve, reject) => {
+      const filereader = new FileReader();
+      filereader.readAsDataURL(file);
+      filereader.onload = () => {
+        resolve(filereader.result);
+      };
+      filereader.onerror = (err) => {
+        reject(err);
+      };
+    });
+    setData({ ...data, image: result });
+  };
   const handleChange = (e) => {
     const emailPattern = /^[a-z][a-z0-9]+@[a-z0-9]+(?:[.][a-z0-9]{2,})+$/;
     const mblPattern = /^[0-9]{10}$/;
@@ -36,10 +49,7 @@ const Contact = () => {
       /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*_]).{8,}$/;
     const { name, value, files } = e.target;
     name == 'image'
-      ? setData({
-          ...data,
-          [name]: URL.createObjectURL(files[0]),
-        })
+      ? convertToBase64(files[0])
       : setData({ ...data, [name]: value });
 
     switch (name) {
@@ -73,6 +83,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let isNew = true;
+    console.log(data, 'data');
     localData.forEach((obj) => {
       if (obj.email == data.email) {
         isNew = false;

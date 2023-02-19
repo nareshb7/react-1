@@ -67,6 +67,8 @@ const About = () => {
         <b>Topics : Reusable Component</b>
       </p>
       <hr />
+      <h2>Paginaton Example :</h2>
+      <p>We limited the data into 10 items per page </p>
     </div>
   );
 };

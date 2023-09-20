@@ -34,6 +34,9 @@ const ExampleNav = () => {
         <li>
           <NavLink to="checkboxex">CheckBox Ex </NavLink>
         </li>
+        <li>
+          <NavLink to="tabs">Tab key control</NavLink>
+        </li>
       </ul>
     </nav>
   );

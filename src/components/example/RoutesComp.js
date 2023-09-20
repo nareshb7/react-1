@@ -10,6 +10,7 @@ import IpAdrs from './IpAdrs';
 import GetLocalIp from './LocalIpAdrs';
 import Palindrome from './Palindrome';
 import CheckBoxEx from './CheckBoxEx';
+import TabsCheck from './TabsCheck'
 
 const ExampleRoutes = () => {
   return (
@@ -25,6 +26,7 @@ const ExampleRoutes = () => {
         <Route path="localip" element={<GetLocalIp />} />
         <Route path="palindrome" element={<Palindrome />} />
         <Route path="checkboxex" element={<CheckBoxEx />} />
+        <Route path='tabs' element={<TabsCheck />} />
       </Routes>
     </div>
   );

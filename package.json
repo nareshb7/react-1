@@ -29,5 +29,6 @@
   },
   "devDependencies": {
     "react-scripts": "latest"
-  }
+  },
+  "proxy": "https:localhist:2000"
 }
